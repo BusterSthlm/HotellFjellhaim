@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "garamond";
+    src:url("./fonts/EB_Garamond") format("truetype");
+  
+}
+:root {
+    /* primära färger*/
+
+    --ljus_brun_ren: #68452D;
+    --beige_näver: #F3E9D7; 
+
+    /* Sekundära färger */
+
+    --röd_fjällheim: #8A2222;
+    --grön_tall: #3A5232; 
+    --mörk_brun_bkörn: #331F11; 
+
+    /* Fonts */
+    
+
+
+
+}
