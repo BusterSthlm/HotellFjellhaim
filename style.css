@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @font-face {
     font-family: "eb_garamond";
     src:url("./EB_Garamond/static/EBGaramond-Regular.ttf") format("truetype");
@@ -61,15 +63,14 @@
 }
 
 
-:root {
-    /* primära färger*/
-
-    --ljus_brun_ren: #68452D;
-    --beige_näver: #F3E9D7; 
-
-    /* Sekundära färger */
-
-    --röd_fjällheim: #8A2222;
-    --grön_tall: #3A5232; 
-    --mörk_brun_bkörn: #331F11; 
-}
+  @theme {
+    --font-eb_garamond: "eb_garamond", serif; 
+    --font-cormorant_garamond: "cormorant_garamond", serif;
+    --font-lato: "lato", sans-serif; 
+    --color-*: initial;
+    --color-ljus_brun_ren: #68452D;
+    --color-beige_naver: #F3E9D7;
+    --color-röd_fjallheim: #8A2222;
+    --color-gron_tall: #3A5232;
+    --color-mork_brun_bjorn: #331F11;
+  }
