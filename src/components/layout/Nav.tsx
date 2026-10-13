@@ -1,23 +1,23 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../assets/grafisk-material/Illustrationer med nya korsstygn/logotyp_fjällheim_primär.svg";
+import logo from "../../assets/grafisk-material/Illustrations/logo/logotyp_fjällheim_primär.svg";
 
-type NavLink = {
-    Label: string;
+type NavItem = {
+    label: string;
     href: string;
 }
 
 const BRAND = {
-    logo: logo,
+    logo,
     name: "Hotell Fjellhaim",
     href: "/"
 
 }
 
 const LINKS: NavItem[] = [
-    {Label: "Home", href: "/"},
-    {Label: "About", href: "/about"},
-    {Label: "Contact", href: "/contact"}
+    {label: "Home", href: "/"},
+    {label: "About", href: "/about"},
+    {label: "Contact", href: "/contact"}
 
 ];
 
@@ -27,34 +27,68 @@ const CTA = {
 
 }
 
-const linkClass= ({active}: {active: boolean}) => `px-3 py-2 rounded-md text-sm font-medium ${active ? "text-blue-500" : "text-gray-700 hover:text-blue-500"}`; 
-
+const linkClass = ({ isActive}: {isActive: boolean}) =>
+    `px-3 py-2 rounded-md text-sm font-medium ${isActive ? "text-blue-500" : "text-gray-700 hover:text-blue-500"}`;
 
 export default function Nav() {
-    const [open, setOpen] = useState(false);
-    const path = window.location.pathname;
-    const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWith(href));
+const [open, setOpen] = useState(false);
 
-    return (
-        <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-            <nav aria-label="Huvudmeny" className="flex items-center justify-between px-4 py-3">
-                
+return (
+    <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <nav aria-label="Huvudmeny" className="flex items-center justify-between px-4 py-3">
             {/*logotype*/ }
-            <a href={BRAND.href} className="flex items-center">
-             {BRAND.logo && <img src={BRAND.logo} alt={BRAND.name} className="h-8 w-auto mr-2" />}
-            <span>{BRAND.name}</span>
-            </a>
+            <Link to={BRAND.href} className="flex items-center">
+                <img src={BRAND.logo} alt={BRAND.name} className="h-8 w-auto" />
+                <span>{BRAND.name}</span>
+            </Link>
 
-             {/*bokningsnapp*/}
-            <a href={CTA.href} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300">
-                {CTA.label}
-            </a>
+        {/*Desktop*/ }
+        <ul className="hidden md:flex space-x-4">
+            {LINKS.map((link) => (
+                <li key={link.href}>
+                    <NavLink to={link.href} end={link.href === "/"} className={linkClass}>
+                        {link.label}
+                    </NavLink>
+                </li>
+            ))}
+        </ul>
 
-            </nav>
-        </header>
+        {/*Boka knapp*/ }
+        <Link to={CTA.href} className="hidden md:inline-block bg-blue-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-600">
+            {CTA.label}
+        </Link>
 
-       
+        
+        {/*Mobile menu button*/ }
+        <button className="md:hidden px-3 py-2" aria-expanded={open} aria-label="Öppna meny" onClick={() => setOpen(!open)}
+        >_</button>
 
-    )
-    
+        </nav>
+
+            {/*Mobile meny*/ }
+            {open && (
+                <ul className="md:hidden space-y-1 px-2 py-2">
+                    {LINKS.map((link) => (
+                        <li key={link.href}>
+                            <NavLink to={link.href} end={link.href === "/"} className={linkClass} onClick={() => setOpen(false)}>
+                                {link.label}
+                            </NavLink>
+                        </li>
+                    ))}
+                    <Link to={CTA.href} className="block bg-blue-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-600" onClick={() => setOpen(false)}>
+                        {CTA.label}
+                    </Link>
+                </ul>
+            )}
+
+
+    </header>
+
+);
+
 }
+
+
+
+
+
