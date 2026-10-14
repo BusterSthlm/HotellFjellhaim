@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import image from "../../assets/Images/Bilder_bokning/Rum_vit.jpg";
 
 export type Room = {
     id: number;
@@ -16,7 +17,7 @@ type RoomCardProps = {
 
 export default function RoomCard({ room }: RoomCardProps) {
     return (
-        <div className="bg-secondary rounded-lg shadow-md overflow-hidden">
+        <div className="bg-white rounded-lg shadow-md overflow-hidden max-w-sm">
             <img src={room.image} alt={room.name} className="w-full h-48 object-cover" />
             <div className="p-4">
                 <h2 className="text-lg font-semibold mb-2">{room.name}</h2>

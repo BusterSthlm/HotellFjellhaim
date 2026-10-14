@@ -24,7 +24,6 @@ function App() {
         <Route path="/Company" element={<Company />} />
         <Route path="/Experience" element={<Experience />} />
         <Route path="/Resturant" element={<Resturant />} />
-        
       </Routes>
       </main>
       <Footer />

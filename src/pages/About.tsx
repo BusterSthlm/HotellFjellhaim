@@ -5,8 +5,8 @@ export default function HomePage(){
     return (
         <>
         <Nav/>
-        <main className="flex flex-col items-center justify-center w-full h-screen text-center bg-secondary">
-        <h1>OM hotell fjellheim</h1>
+        <main className="flex flex-col items-center justify-center w-full text-center bg-secondary">
+        <h1>Om hotell fjellheim</h1>
         
         </main>
         <Footer />

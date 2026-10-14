@@ -9,7 +9,6 @@
   --color-tertiary: #72492c; /*ren*/
   --color-red: #f4f3ec; /*Dalaröd*/
   --color-green: #415531; /*Skog*/
-
   --text: #3a2516; /*All text i mörkbrunt*/
 
   --sans: system-ui, "Segoe UI", Roboto, sans-serif;
@@ -18,7 +17,7 @@
 }
 
 #root {
-  width: 1126px;
+  
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -30,9 +29,8 @@
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--secondary);
+
+  background-color: var(--secondary);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
