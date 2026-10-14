@@ -15,16 +15,18 @@ function App() {
   return (
     <Router>
       <Nav />
+      <main className="min-h-screen pt-16">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/" element={<About />} />
-        <Route path="/" element={<Activities />} />
-        <Route path="/" element={<Booking />} />
-        <Route path="/" element={<Company />} />
-        <Route path="/" element={<Experience />} />
-        <Route path="/" element={<Resturant />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Activities" element={<Activities />} />
+        <Route path="/Booking" element={<Booking />} />
+        <Route path="/Company" element={<Company />} />
+        <Route path="/Experience" element={<Experience />} />
+        <Route path="/Resturant" element={<Resturant />} />
         
       </Routes>
+      </main>
       <Footer />
     </Router>
   );

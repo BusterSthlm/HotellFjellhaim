@@ -9,6 +9,7 @@ export default function HomePage(){
         <h1>Upplevelser</h1>
         
         </main>
+        <Footer />
         </>
     );
 }

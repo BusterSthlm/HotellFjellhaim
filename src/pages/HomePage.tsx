@@ -11,6 +11,7 @@ export default function HomePage(){
         <p>Hej</p>
         
         </main>
+        <Footer />
         </>
     );
 }
