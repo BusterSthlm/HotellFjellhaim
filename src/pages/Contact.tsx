@@ -12,9 +12,10 @@ export default function HomePage(){
     return (
         <>
         <Nav/>
-        <main className="flex flex-col items-center justify-center w-full text-center bg-secondary">
+        <Hero  titel="välkommen till hotell Fjellheim" description="Ett fjällhotell med värme och karaktär" href="/booking"  /> 
+        <main className="flex flex-col justify-center item-center text-center bg-secondary">
 
-            <Hero  titel="välkommen till hotell Fjellheim" description="Ett fjällhotell med värme och karaktär" href="/booking" button="Klicka här för att boka" /> 
+        
 
         <h1>Kontakta oss  </h1>
          <p>Har du frågor kan du kontakta oss här eller genom att ringa. </p>
@@ -33,8 +34,8 @@ export default function HomePage(){
         <label htmlFor="message" className="{labelClass}"> meddelande* </label>
         <textarea id="message" name="message" required placeholder="Skriv ditt meddelandet här.." className={inputClass} />
 
-        <button className="bg-primary text-white outline-1 rounded-md p-5">
-            skicka meddelande
+        <button className="bg-primary text-white outline-1 rounded-md p-5 w-40">
+            Skicka meddelande
         </button>
         
         

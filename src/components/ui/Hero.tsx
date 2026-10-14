@@ -11,7 +11,7 @@ type heroProps = {
 
 export default function Hero ({ titel, description, href, button = "Boka rum"}: heroProps){
     return(
-        <section className="relative z-10 max-w-340 mx-auto px-4 sm:px-6 lg:px-8 py-24 min-h-150 md:min-h-[80dvh] flex flex-col justify-center space-y-8">
+        <section className="relative z-10  mx-auto px-4 sm:px-6 lg:px-8 py-24 min-h-150  flex flex-col justify-center space-y-8">
             
             <img src={Heroimage} alt="" className="absolute inset-0 h-full w-full object-cover"/>
             <div className="absolute inset-0 bg-black/40" />
