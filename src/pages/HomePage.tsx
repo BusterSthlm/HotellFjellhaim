@@ -1,5 +1,5 @@
 import Header from "../components/layout/Header";
-import backgroundImage from "../assets/Images/Bilder hemsida/IMG_7906.jpg";
+import backgroundImage from "../assets/Images/Bilder_startsida/IMG_7906.jpg";
 
 export default function HomePage() {
   return (
