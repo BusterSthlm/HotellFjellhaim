@@ -1,3 +1,4 @@
+import Footer from "../components/layout/Footer";
 import Nav from "../components/layout/Nav";
 
 export default function Activities() {
@@ -7,6 +8,7 @@ export default function Activities() {
             <Nav />
             <h1>Activities</h1>
             <p>Welcome to the activities page!</p>
+            <Footer />
         </main>
     );
 }

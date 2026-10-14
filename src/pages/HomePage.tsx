@@ -1,4 +1,5 @@
 import Nav from "../components/layout/Nav";
+import Footer from "../components/layout/Footer";
 
 export default function HomePage(){
     return (
@@ -8,6 +9,7 @@ export default function HomePage(){
         <h1>Hej</h1>
         <h1>Hej</h1>
         <p>Hej</p>
+        
         </main>
         </>
     );

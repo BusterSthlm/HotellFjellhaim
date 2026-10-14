@@ -16,19 +16,23 @@ const BRAND = {
 
 const LINKS: NavItem[] = [
     {label: "Home", href: "/"},
-    {label: "About", href: "/about"},
-    {label: "Contact", href: "/contact"}
+    {label: "Om oss", href: "/About"},
+    {label: "Möten och företag", href: "/Company"},
+    {label: "Resturang", href: "/Restaurant"},
+    {label: "upplevelse", href: "/Experience"},
+    {label: "Contact", href: "/Contact"},
+    {label: "Boka rum", href: "/Booking"}
 
 ];
 
 const CTA = {
-    label: "Book room today",
-    href: "/book"
+    label: "Boka rum",
+    href: "/booking"
 
 }
 
 const linkClass = ({ isActive}: {isActive: boolean}) =>
-    `px-3 py-2 rounded-md text-sm font-medium ${isActive ? "text-blue-500" : "text-gray-700 hover:text-blue-500"}`;
+    `px-3 py-2 rounded-md text-sm font-medium ${isActive ? "text-primary" : "text-primary hover:text-primary"}`;
 
 export default function Nav() {
 const [open, setOpen] = useState(false);
@@ -39,7 +43,7 @@ return (
             {/*logotype*/ }
             <Link to={BRAND.href} className="flex items-center">
                 <img src={BRAND.logo} alt={BRAND.name} className="h-8 w-auto" />
-                <span>{BRAND.name}</span>
+                
             </Link>
 
         {/*Desktop*/ }
@@ -54,7 +58,7 @@ return (
         </ul>
 
         {/*Boka knapp*/ }
-        <Link to={CTA.href} className="hidden md:inline-block bg-blue-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-600">
+        <Link to={CTA.href}  className="hidden md:inline-block bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-secondary">
             {CTA.label}
         </Link>
 
@@ -75,7 +79,7 @@ return (
                             </NavLink>
                         </li>
                     ))}
-                    <Link to={CTA.href} className="block bg-blue-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-600" onClick={() => setOpen(false)}>
+                    <Link to={CTA.href} className="block bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-secondary" onClick={() => setOpen(false)}>
                         {CTA.label}
                     </Link>
                 </ul>
