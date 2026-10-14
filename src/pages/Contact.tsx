@@ -12,7 +12,7 @@ export default function HomePage(){
     return (
         <>
         <Nav/>
-        <Hero  titel="välkommen till hotell Fjellheim" description="Ett fjällhotell med värme och karaktär" href="/booking"  /> 
+        <Hero  titel="Kontakt oss" description="Ett fjällhotell med värme och karaktär" href="/booking"  /> 
         <main className="flex flex-col justify-center item-center text-center bg-secondary">
 
         

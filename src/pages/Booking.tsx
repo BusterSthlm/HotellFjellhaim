@@ -24,7 +24,7 @@ export default function Activities() {
         <> {/* Wrapper div för att innehålla allt innehåll */ }
         <Nav />
         
-        <Hero  titel="välkommen till hotell Fjellheim" description="Ett fjällhotell med värme och karaktär" href="/booking" button="Klicka här för att boka" /> 
+        <Hero  titel="Välkommen till hotell Fjellheim" description="Ett fjällhotell med värme och karaktär" href="/booking" button="Klicka här för att boka" /> 
 
         
 
