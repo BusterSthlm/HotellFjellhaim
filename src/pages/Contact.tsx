@@ -4,15 +4,15 @@ import bild from "../assets/Images/Bilder_startsida/Hotellet_vinter .jpg";
 import Hero from "../components/ui/Hero";
 
 
-const inputClass= "w-full rounded-md border text-sm bg-secondary";
-const labelClass= "md-1.5 block text-sm font-medium text-primary";   
+const inputClass= "w-70 h-auto rounded-md border text-sm bg-secondary p-4";
+const labelClass= "md-1.5 block text-sm font-medium text-primary w-50 m-2";   
 
 
 export default function HomePage(){
     return (
         <>
         <Nav/>
-        <main className="flex flex-col items-center justify-center w-80  text-center bg-secondary">
+        <main className="flex flex-col items-center justify-center w-full text-center bg-secondary">
 
             <Hero  titel="välkommen till hotell Fjellheim" description="Ett fjällhotell med värme och karaktär" href="/booking" button="Klicka här för att boka" /> 
 
@@ -33,7 +33,7 @@ export default function HomePage(){
         <label htmlFor="message" className="{labelClass}"> meddelande* </label>
         <textarea id="message" name="message" required placeholder="Skriv ditt meddelandet här.." className={inputClass} />
 
-        <button className="bg-primary text-white outline-1 rounded-md">
+        <button className="bg-primary text-white outline-1 rounded-md p-5">
             skicka meddelande
         </button>
         
