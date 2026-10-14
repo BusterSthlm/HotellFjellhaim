@@ -1,0 +1,16 @@
+import Nav from "../components/layout/Nav";
+import Footer from "../components/layout/Footer";
+
+export default function HomePage(){
+    return (
+        <>
+        <Nav/>
+        <main className="flex flex-col items-center justify-center w-full h-screen text-center bg-secondary">
+        <h1>OM hotell fjellheim</h1>
+        
+        </main>
+        <Footer />
+        </>
+    );
+}
+

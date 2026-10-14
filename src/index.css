@@ -4,8 +4,62 @@
 @theme {
   --font-garamond: "EB Garamond", serif;
   --font-lato: "Lato", sans-serif;
+  --color-primary: #3a2516; /*mörkbrun*/
+  --color-secondary: #f7eedf; /*bakgrundsfärg*/
+  --color-tertiary: #72492c; /*ren*/
+  --color-red: #f4f3ec; /*Dalaröd*/
+  --color-green: #415531; /*Skog*/
+
+  --text: #3a2516; /*All text i mörkbrunt*/
+
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
 }
 
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--primay);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--primary);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+/*
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -117,3 +171,4 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+*/
