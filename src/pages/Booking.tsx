@@ -23,7 +23,7 @@ export default function Activities() {
     return (
         <> {/* Wrapper div för att innehålla allt innehåll */ }
         <Nav />
-        <main className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4  py-16 md-grid-cols-4 items-center justify-center w-full h-screen text-center">
+        <main className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4  py-16 md-grid-cols-4 items-center justify-center w-full h-screen text-center bg-secondary">
             
             <Hero titel="välkommen till hotell Fjellheim" description="Ett fjällhotell med värme och karaktär" href="/booking" button="Klicka här för att boka" /> 
             <div className="md:col-span-4">    
@@ -44,8 +44,6 @@ export default function Activities() {
                 ))}
 
             </div>
-            
-
             
         </main>
         <Footer />

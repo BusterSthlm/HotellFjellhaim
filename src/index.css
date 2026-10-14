@@ -1,6 +1,6 @@
 
 @import "tailwindcss";
-
+/*Ska vi ha Garmond på webben?? inväntar svar*/
 
 @theme{
   --color-primary: #3A2516; /*mörkbrun*/
@@ -11,11 +11,9 @@
 
   --text: #3A2516; /*All text i mörkbrunt*/
 
-
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --lato:;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
+  --garmond: ui-monospace, Consolas, monospace;
 
 
 }
@@ -36,7 +34,7 @@
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
-  background: var(--bg);
+  background: var(--secondary);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
