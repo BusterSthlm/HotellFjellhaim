@@ -8,8 +8,6 @@ export default function HomePage(){
         <main className="flex flex-col items-center justify-center w-full  text-center bg-secondary">
         <h1>Boka konferenserum idag </h1>
         <section aria-label="banner" className="px-4 md:px-8 mt-6">
-            
-
         </section>
         
         </main>

@@ -1,8 +1,8 @@
 import Nav from "../components/layout/Nav";
 import Footer from "../components/layout/Footer";
 import RoomCard, { type Room } from "../components/ui/Card";
-import Hero from "../components/ui/Hero"
-import rum_vit from "../assets/Images/Bilder_bokning/Rum_vit.jpg"
+import Hero from "../components/ui/Hero";
+import rum_vit from "../assets/Images/Bilder_bokning/Rum_vit.jpg";
 
 
 
