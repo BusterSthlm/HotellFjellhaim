@@ -146,7 +146,7 @@ export default function MatOchDryck(){
                             </dl>
                         </div>
                     ))}
-                <h2>Öppettider</h2>
+                
                 </div>                
             </section>
 
