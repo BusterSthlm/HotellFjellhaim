@@ -48,6 +48,7 @@ export default function MatOchDryck(){
     return(
         <>
         <Nav/>
+        <Hero titel="Hotell Fjellheim" description="Ett varmt hotell" href="/booking" button="Klicka här för att boka rum" />
         <main className="bg-[#FAECDD] text-[#2b2118]">
 
             <section className="relative flex min-h-[420px] items-end bg-cover bg-center text-[#f4ECDD]" style={{backgroundImage:'url{IMG.hero}'}}>
@@ -74,7 +75,7 @@ export default function MatOchDryck(){
                 <div className="bg-[#3f4a35] px-6 py-12 text-[#FAECDD] md:px-12">
                     <p className={label}>Frukost</p>
                     <h2 className="">Njut av en generös frukostbuffe med lokala råvaror , nybakat bröd, varma och kalla alternativ</h2>
-                </div>
+                
 
                 <div className="mt-10 grid gap-8 sm:grid-cols-2">
                     <div className="flex gap-4">
@@ -94,10 +95,10 @@ export default function MatOchDryck(){
 
                     </div>
                 </div>
-
+</div>
             </section>
 
-            <section className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md: grid-cols-[1gr_1.4fr] md:items-center">
+            <section className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-[1fr_1.4fr] md:items-center">
                 <div>
                     <p>Resturang och bar</p>
                     <h2 className="">Mat, dryck och sällskap året runt</h2>
@@ -107,14 +108,13 @@ export default function MatOchDryck(){
                             <a href="Boka"> boka bord</a>
                             
                         </div>
-                </div>
+                        </div>
 
-                <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-2 gap-3">
                     <img src={IMG.retsturang1} alt="Dukat bord i resturang" className="rounded object-cover" />
                     <img src={IMG.resturang2} alt="Dukat bord i resturang" className="rounded object-cover" />
                     
-                </div>
-            
+                    </div>
             </section>
 
             <section className="relative flex min-h-[320px] items-center bg-cover bg-center md:min-h-[400px]" style={{ backgroundImage:'url(${IMG.miljo})'}} >
