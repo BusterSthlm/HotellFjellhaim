@@ -1,7 +1,7 @@
 import Nav from "../components/layout/Nav";
 import Footer from "../components/layout/Footer";
 import Hero from "../components/ui/Hero";
-import { ArrowRight, CalenderDays, Clock, Coffee, Coins, Leaf, Wine} from "lucide-react";
+import { CalendarDays, Clock, Coffee, Coins, Leaf, Wine} from "lucide-react";
 import ren from "../assets/Images/Bilder_aktiveter/person-med-ren.jpg";
 
 const IMG={
@@ -22,7 +22,7 @@ const features = [
         icon: Leaf, titel:"lokala råvaror", text:"från närområdet"
     },
     {
-        icon: CalenderDays, titel:"lokala råvaror", text:"från närområdet"
+        icon: CalendarDays, titel:"lokala råvaror", text:"från närområdet"
     },
     {
         icon: Wine, titel:"lokala råvaror", text:"från närområdet"
@@ -59,8 +59,7 @@ export default function MatOchDryck(){
                 <ul className="mx-auto grid max-w-6xl grid cols-2 md:grid cols-4">
                 </ul>
 
-                <p>{titel}</p>
-                <p>{text}</p>
+              
 
             </section>
 

@@ -73,16 +73,46 @@ export default function Konferens() {
                 <p className="mt-4 max-w-sm text-sm">Kombinera konferense med aktiviteter som vandring, cykling, fiskning, matupplevelser eller en kväll vid lägerälden , vi hjälper er att skapa ett program som passar ert team.</p>
             <a href="#Aktivitet" className="group mt-8 inline-flex w-fit items-center gap-3 rounded-md hover:bg-black">Utforska aktiviteter</a>
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />  
-            
             </div>
+        </section>
 
+           <section className="grid bg-[#5A3D2F] text-[#FAECDD] md:grid-cols-[2fr_1.6fr_1fr]">
+            <img src={IMG.vandring} alt="vandring i fjällen" className="h-72 w-full object-cover md:h-full"/>
+            <div className="relative flex flex-col justify-center overflow-hidden px-6 py-12 md:px-10">
+
+                <p className="text-sx uppercase ">Resturang  & BAR </p>
+                <h2 className={'${serif} text-2xl text-4xl md:text-5xl'}>Stärker sammarbete med upplevelse</h2>
+                <p className="mt-4 max-w-sm text-sm">Kombinera konferense med aktiviteter som vandring, cykling, fiskning, matupplevelser eller en kväll vid lägerälden , vi hjälper er att skapa ett program som passar ert team.</p>
+            <a href="#Aktivitet" className="group mt-8 inline-flex w-fit items-center gap-3 rounded-md hover:bg-black">Utforska aktiviteter</a>
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />  
+            </div>
+        </section>
+
+        <section className="grid bg-[#5A3DFF8] text-[#FAECDD] md:grid-cols-[2fr_1.6fr_1fr]">
+            <img src={IMG.vandring} alt="vandring i fjällen" className="h-72 w-full object-cover md:h-full"/>
+            <div className="relative flex flex-col justify-center overflow-hidden px-6 py-12 md:px-10">
+
+                <p className="text-sx uppercase ">Lokala smaker i unik miljö. </p>
+                <h2 className={'${serif} text-2xl text-4xl md:text-5xl'}>Oavsett om du är hotellgäst, förbipasserande eller på konferans är du alltid välkommen  att njuta av god mat och dryck hos oss.</h2>
+                <p className="mt-4 max-w-sm text-sm">Kombinera konferense med aktiviteter som vandring, cykling, fiskning, matupplevelser eller en kväll vid lägerälden , vi hjälper er att skapa ett program som passar ert team.</p>
+            <a href="#Aktivitet" className="group mt-8 inline-flex w-fit items-center gap-3 rounded-md hover:bg-black">Utforska aktiviteter</a>
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />  
+            </div>
+        </section>
+
+        <section className="grid bg-[#5A3A28] text-[#FAECDD] md:grid-cols-[2fr_1.6fr_1fr]">
+            <img src={IMG.vandring} alt="vandring i fjällen" className="h-72 w-full object-cover md:h-full"/>
+            <div className="relative flex flex-col justify-center overflow-hidden px-6 py-12 md:px-10">
+
+                <p className="text-sx uppercase ">Öppettider </p>
+                <h2 className={'${serif} text-2xl text-4xl md:text-5xl'}>Oavsett om du är hotellgäst, förbipasserande eller på konferans är du alltid välkommen  att njuta av god mat och dryck hos oss.</h2>
+                <p className="mt-4 max-w-sm text-sm">Kombinera konferense med aktiviteter som vandring, cykling, fiskning, matupplevelser eller en kväll vid lägerälden , vi hjälper er att skapa ett program som passar ert team.</p>
+            <a href="#Aktivitet" className="group mt-8 inline-flex w-fit items-center gap-3 rounded-md hover:bg-black">Utforska aktiviteter</a>
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />  
+            </div>
         </section>
         </div>
       
       
     </>
-    )
-    
-};
-
-
+     
