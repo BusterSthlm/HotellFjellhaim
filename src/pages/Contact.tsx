@@ -19,7 +19,7 @@ export default function HomePage(){
 
         <h1>Kontakta oss  </h1>
          <p>Har du frågor kan du kontakta oss här eller genom att ringa. </p>
-        <section aria-label="banner" className="px-4 md:px-8 mt-6">
+        <section aria-label="banner" className="px-4 md:px-8 mt-6 bg-white">
         </section>
         
         <label htmlFor="email" className={labelClass}>namn</label>
