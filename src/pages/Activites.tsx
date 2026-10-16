@@ -6,9 +6,9 @@ import bild from "../assets/Images/Bilder_startsida/IMG_8138.jpg";
 
 const ACTIVITIES: CardData[] = [
 
-{id:1, name: "skidåkning", description: "..", image: bild, href: "/activity/skidor"}, 
-{id:2, name: "Vandring", description: "..", image: bild, href: "/activity/skidor"},
-{id:3, name: "Bada utomhus", description: "..", image: bild, href: "/activity/skidor"}
+{id:1, name: "Att göra - vår, sommar & höst", description: "Det finns flera aktiviteter att njuta av under våren, sommaren och hösten i närheten av Hotel Fjällheim.", image: bild, href: "/activity/skidor"}, 
+{id:2, name: "Att göra vinter", description: "Det finns flera aktiviteter att njuta av under vintern i närheten av Hotel Fjällheim.", image: bild, href: "/activity/skidor"},
+
 ]
     
 export default function Acitvities(){

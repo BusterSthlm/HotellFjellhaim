@@ -13,7 +13,6 @@ const ROOMS: Room[]= [
 ]
 
 
-
 export default function Booking(){
     return (
         <>
