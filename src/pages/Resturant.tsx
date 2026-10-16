@@ -58,9 +58,6 @@ export default function MatOchDryck(){
             <section className="border-b border-[#2b2118]">
                 <ul className="mx-auto grid max-w-6xl grid cols-2 md:grid cols-4">
                 </ul>
-
-              
-
             </section>
 
 
