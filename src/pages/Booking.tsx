@@ -1,3 +1,6 @@
+import { useState} from "react";
+import { Link } from "react-router-dom"; 
+import { ArrowLeft, ArrowRight, Bed } from "lucide-react";
 import Nav from "../components/layout/Nav";
 import Footer from "../components/layout/Footer";
 import RoomCard, { type Room } from "../components/ui/Card";

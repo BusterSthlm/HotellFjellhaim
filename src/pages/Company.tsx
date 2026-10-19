@@ -3,8 +3,6 @@ import Footer from "../components/layout/Footer";
 import {ArrowRight} from "lucide-react";
 import ren from "../assets/Images/Bilder_aktiveter/person-med-ren.jpg";
 
-
-
 const IMG = {
     dag:ren, 
     overnattning:ren,
