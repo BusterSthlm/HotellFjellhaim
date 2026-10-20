@@ -1,17 +1,34 @@
 import Footer from "../components/layout/Footer";
 import Nav from "../components/layout/Nav";
 import Hero from "../components/ui/Hero";
+import Card, {type CardData } from "../components/ui/card_info";
+import bild from "../assets/Images/Bilder_startsida/IMG_8138.jpg";
 
-export default function Activities() {
+const ACTIVITIES: CardData[] = [
 
+{id:1, name: "Att göra - vår, sommar & höst", description: "Det finns flera aktiviteter att njuta av under våren, sommaren och hösten i närheten av Hotel Fjällheim.", image: bild, href: "/activity/skidor"}, 
+{id:2, name: "Att göra vinter", description: "Det finns flera aktiviteter att njuta av under vintern i närheten av Hotel Fjällheim.", image: bild, href: "/activity/skidor"},
+
+]
+    
+export default function Acitvities(){
     return (
-        <><Nav />
-        <Hero titel="Välkommen till hotell Fjellheim" description="Ett fjällhotell med värme och karaktär" href="/booking" button="Klicka här för att boka" />
-        <main className="flex flex-col items-center justify-center w-full  text-center bg-secondary">
+        <>
+        <Nav />
+        <Hero titel="Hotell Fjellheim" description="Ett varmt hotell" href="/booking" button="Klicka här för att boka rum" />
 
-            <h1>Activities</h1>
-            <p>Welcome to the activities page!</p>
-            <Footer />
-        </main></>
-    );
+        <main>
+            <h1>Upplevelser</h1>
+
+            <div className="mt-8 grid gap-6 sm:grid-cols-2">
+                {ACTIVITIES.map(item => (
+                    <Card key={item.id} card = {item} />
+                ))}
+            </div>
+        </main>
+
+        <Footer/>
+
+        </>
+    )
 }

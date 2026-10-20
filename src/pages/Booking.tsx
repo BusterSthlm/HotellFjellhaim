@@ -1,3 +1,6 @@
+import { useState} from "react";
+import { Link } from "react-router-dom"; 
+import { ArrowLeft, ArrowRight, Bed } from "lucide-react";
 import Nav from "../components/layout/Nav";
 import Footer from "../components/layout/Footer";
 import RoomCard, { type Room } from "../components/ui/Card";
@@ -11,7 +14,6 @@ const ROOMS: Room[]= [
     {id:3, name:"Dubbelrum", description:"En trevligt rum", image:rum_vit, price:1234, guests:2, href:"/rooms/delux"  },
     {id:4, name:"familjerum", description:"En trevligt rum", image:rum_vit, price:1234, guests:2, href:"/rooms/delux"  }
 ]
-
 
 
 export default function Booking(){
