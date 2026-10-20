@@ -3,7 +3,7 @@ import Footer from "../components/layout/Footer";
 import bild from "../assets/Images/Bilder_startsida/Hotellet_vinter .jpg";
 import Hero from "../components/ui/Hero";
 
-const inputClass= "w-70 h-auto rounded-md border text-sm bg-secondary p-4";
+const inputClass= "w-70 h-auto rounded-md border text-sm b g-secondary p-4";
 const labelClass= "md-1.5 block text-sm font-medium text-primary w-50 m-2";   
 
 export default function HomePage(){
@@ -23,7 +23,6 @@ export default function HomePage(){
         <label htmlFor="email" className={labelClass}>Telefon</label>
         <input id="email" name="email" type="email" placeholder="exempel@gmail.com" className={inputClass}/>
 
-        <label htmlFor="email" className={labelClass}>epost</label>
         <input id="email" name="email" type="email" placeholder="exempel@gmail.com" className={inputClass}/>
         
         
