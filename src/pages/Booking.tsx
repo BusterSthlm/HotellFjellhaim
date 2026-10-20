@@ -1,30 +1,13 @@
 
 import Hero from "../components/ui/Hero";
-
-import {useState} from "react";
-import {Link } from "react-router-dom";
-import {ArrowRight, ArrowLeft, BedDouble, User, Wifi, Bath, Mountain, ParkingCircle, Lock, CheckCircle2} from "lucide-react";
+import { ArrowLeft, BedDouble, User, Wifi, Bath, Mountain, ParkingCircle, Lock, CheckCircle2} from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  ArrowLeft,
-  BedDouble,
-  User,
-  Wifi,
-  Bath,
-  CheckCircle2,
-  Lock,
-} from "lucide-react";
 import Header from "../components/layout/Header";
-import Hero from "../components/ui/Hero";
 
 const PRICE_PER_NIGHT = 1543;
 const BREAKFUST = 185;
 const LATE_CHECKOUT = 250;
-
-const PRICE_PER_NIGHT = 3333;
-const BREAKFUST = 222;
-const LATE_CHECKOUT = 214;
 
 const images= ["/images/Bilder_bokning/Rum_vit.jpg"];
 
@@ -35,21 +18,12 @@ const amenities = [
     {icon: Bath, text: "Badkar"},
     {icon: Mountain, text: "Utsikt mot bergen"},
     {icon: ParkingCircle, text: "Parkering"},
-const images = ["../images/Bilder_bokning/badrum.jpg"];
-const amenities = [
-  { icon: BedDouble, text: "queen size säng" },
-  { icon: User, text: "1-4 Gäster" },
-  { icon: Wifi, text: "Gratis Wifi" },
-  { icon: Bath, text: "Privat badrum" },
-  { icon: CheckCircle2, text: "Parkering" },
-];
-
-const kr = (n: number) => `${n.toLocaleString("sv-SE")} kr`;
 
 ];
 
 const kr = (n: number) => `${n.toLocaleString("sv-SE")} kr`;
 
+{/* 
 function nightsBetween(from: string, to: string){
     const diff = (new Date(to).getTime() - new Date(from).getTime()) /86_400_00;
     return Math.max(0, Math.round(diff));
@@ -82,6 +56,7 @@ if (confirmed){
         </section>
     );
 }
+    
 
 return(
     <section className="container-page grid gap-10">
@@ -117,7 +92,7 @@ return(
             </ul>
         </div>
 
-        {/*Bokningsformuläret */}
+        
         <form className="lg:pl-10" onSubmit={(e) =>{
            e.preventDefault();
            if (nights > 0 ) setConfirmed(true); 
@@ -155,7 +130,7 @@ return(
                 <h3 className="font-sans text-xl font-bold">Tillägg</h3>
 
                 <label className="mt-4 flex cursor-pointer items-start gap-4">
-                <input type="checkbox" checked={breakfust} onChange={(e) => setBreakfust(e.target.checked)} className="mt-1 size-8" />
+                <input type="checkbox" checked={BREAKFUST} onChange={(e) => setBreakfust(e.target.checked)} className="mt-1 size-8" />
                 <span className="flex-1">
                     <span className="block text-xl"> Frukost</span>
                     <span className="text-sm">197 kr /person och natt </span>
@@ -168,6 +143,10 @@ return(
     </div>
     </section>
     );
+ 
+*/}
+
+
 function nightsBetween(from: string, to: string) {
   const diff = (new Date(to).getTime() - new Date(from).getTime()) / 86_400_000;
   return Math.max(0, Math.round(diff));
@@ -175,7 +154,7 @@ function nightsBetween(from: string, to: string) {
 
 export default function Boka() {
   const [mainImage, setMainImage] = useState(images[0]);
-  const [checkIn, setCheckIn] = useState("2026-10-21");
+  const [checkIn, setCheckIn] = useState("2026-10-22ö");
   const [checkOut, setCheckOut] = useState("2026-10-21");
   const [guests, setGuests] = useState(2);
   const [breakfast, setBreakfast] = useState(false);
@@ -191,15 +170,15 @@ export default function Boka() {
   if (confirmed) {
     return (
       <section className="container-page flex flex-col items-center py-24 text-center">
-        <CheckCircle2 size={24} className="text-forest" />
+        <CheckCircle2 size={64} className="text-forest" />
         <h1 className="mt-4 text-5xl">Tack för din bokning</h1>
         <p className="mt-4 max-w-md">
-          Fjällsvit {nights} nätter före{guests} gäster({checkIn} - {checkOut}).
-          total {kr(total)}
+          Fjällsvit {nights} nätter för {guests} gäster({checkIn} - {checkOut}).
+          total {kr(total)}.
         </p>
         <Link to="/" className="btn-brown mt-8">
-          {" "}
-          till startsidan
+          
+          TILL STARTSIDAN 
         </Link>
       </section>
     );
@@ -283,8 +262,9 @@ export default function Boka() {
                   className="mt-1 w-full rounded-lg border border-ink bg-white px-4 py-3 text-lg"
                 />
               </label>
+              </div>
 
-              <label className=" mt-4 block">
+              <label className="mt-4 block">
                 <span className="text-xl font-light"> Gäster</span>
                 <select
                   value={guests}
@@ -293,7 +273,7 @@ export default function Boka() {
                 >
                   {[1, 2, 3, 4].map((n) => (
                     <option key={n} value={n}>
-                      {n} {n === 1 ? "vuxen" : "vuxna"}{" "}
+                      {n} {n === 1 ? "vuxen" : "vuxna"}
                     </option>
                   ))}
                 </select>
@@ -302,23 +282,23 @@ export default function Boka() {
               <div className="mt-6 border-t border-forest pt-4">
                 <h3 className="font-sans text-xl font-bold"> Tillägg</h3>
 
-                <label className="mt-4 flex cursour-pointer items-start gap-4">
+                <label className="mt-4 flex cursor-pointer items-start gap-4">
                   <input
                     type="checkbox"
-                    checked={breakfast}
+                    checked={lateCheckout}
                     onChange={(e) => setBreakfast(e.target.checked)}
                     className="mt-1 size-7 accent-forest"
                   />
                   <span className="flex-1">
                     <span className="block text-xl">Sen utcheckning</span>
-                    <span className=" text-sm">185 kr / person</span>
+                    <span className=" text-sm">{LATE_CHECKOUT} kr / person</span>
                   </span>
                   <span className="text-xl">
                     {kr(BREAKFUST * guests * nights)}
                   </span>
                 </label>
 
-                <label className="mt-4 flex cursour-pointer items-start gap-4">
+                <label className="mt-4 flex cursor-pointer items-start gap-4">
                   <input
                     type="checkbox"
                     checked={breakfast}
@@ -333,27 +313,27 @@ export default function Boka() {
                 </label>
               </div>
 
-              <dl className="mt-4 flex justify-between border-t boarder-ink/40 pt-4 text-2xl">
+              <div className="mt-4 flex justify-between border-t border-ink/40 pt-4 text-2xl">
                 <span>
-                  <b>total</b> Inkl. moms
+                  <b>Total</b> Inkl. moms
                 </span>
                 <b>{kr(total)}</b>
-              </dl>
+              </div>
 
               {nights === 0 && (
                 <p className="mt-2 text-berry">
-                  {" "}
                   Utcheckning måste vara efter incheckning
                 </p>
               )}
 
-              <button type="submit">
+              <button type="submit" disabled={nights < 1} className="btn-brown mt-6 w-full display:opacity-50">
+                Boka {kr(total)}
+                </button>
+
                 <p className="mt-3 flex items-center justify-center gap-1 text-sm">
-                  <Lock size={14} /> Säker betalning- du debteras inte för än
-                  bokningen är bekräftat.{" "}
+                    Säker betalning - Du debiteras inte för än bokningen är bekräftad.
                 </p>
-              </button>
-            </div>
+            
           </form>
         </div>
       </section>
