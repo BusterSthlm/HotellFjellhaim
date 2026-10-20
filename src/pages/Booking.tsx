@@ -33,8 +33,8 @@ function nightsBetween(from: string, to: string) {
 
 export default function Boka() {
 const [mainImage, setMainImage] = useState(images[0]);
-const [checkIn, setCheckIn] = useState("2026-10-22");
-const [checkOut, setCheckOut] = useState("2026-10-21");
+const [checkIn, setCheckIn] = useState("2026-10-21");
+const [checkOut, setCheckOut] = useState("2026-10-22");
 const [guests, setGuests] = useState(2);
   const [breakfast, setBreakfast] = useState(false);
   const [lateCheckout, setLateCheckout] = useState(false);
@@ -205,12 +205,14 @@ const [guests, setGuests] = useState(2);
                 </p>
               )}
 
-              <button type="submit" disabled={nights < 1} className="btn-brown mt-6 w-full display:opacity-50">
+              <button type="submit" 
+              disabled={nights < 1} 
+              className=" bg-green group mt-8 flex-w-full items-center justify-center gap-3 rounded-xl px-6 py-5 font-semibold text-secondary shadow-md transition-all duration-200 hover:-translate-1">
                 Boka {kr(total)}
                 </button>
 
                 <p className="mt-3 flex items-center justify-center gap-1 text-sm">
-                    <lock size={14} /> Säker betalning - Du debiteras inte för än bokningen är bekräftad.
+                    <Lock size={14} /> Säker betalning - Du debiteras inte för än bokningen är bekräftad.
                 </p>
             
           </form>
