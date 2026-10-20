@@ -1,8 +1,8 @@
 import Header from "../components/layout/Header";
 import aboutBild from "../assets/Images/Bilder_om/IMG_7813.jpg";
-import bastuBild from "../assets/Images/Bilder_om/kschlott-sauna-2844863_1920.jpg";
-import hundBild from "../assets/Images/Bilder_om/teefarm-outlook-1844110_1920.jpg";
-import fjällBild from "../assets/Images/Bilder_om/michael-odelberth-cA4m16RhDLE-unsplash.jpg";
+import svartvitBild from "../assets/Images/Bilder_om/fjällheim_svartvit.png";
+import personBild from "../assets/Images/Bilder_om/IMG_8032.jpg";
+import renBild from "../assets/Images/Bilder_om/ren.jpg";
 
 export default function HomePage() {
   return (
@@ -37,27 +37,32 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 items-stretch">
             {/* Text till vänster */}
             <div className="px-12 py-24">
-              <p className="text-xl font-garamond mb-4">VÅR HISTORIA</p>
+              <p className="text-4xl font-garamond">Där allt en gång började</p>
 
-              <p className="text-4xl font-garamond">
-                En plats med rötter i Dalarna.
-              </p>
-
-              <p className="text-lg font-lato mt-5 leading-relaxed">
-                Fjällheim Idre är ett charmigt boende i hjärtat av Idre by med
-                en varm och inbjudande atmosfär – perfekt för dig som vill
-                kombinera avkoppling med natur- och fjällaktiviteter året runt.
-                Här finns gott om plats för återhämtning vid brasan, i loungen
-                eller varför inte unna dig en mysig stund i bastun som du kan
-                abonnera för dig själv eller tillsammans med sällskap.
+              <p className="text-lg font-lato leading-relaxed mt-5">
+                Långt innan Fjällheim blev hotell var byggnaden ett skolhem för
+                barn från Idre och de omkringliggande byarna. Avstånden var
+                långa och skolskjuts fanns inte, så barn som bodde långt bort
+                bodde på skolhemmet under skolveckan och återvände hem på
+                lördagarna. Det första skolhemmet byggdes på Berget 1924. Den
+                ursprungliga stommen bevarades senare som hembygdsgård och
+                flyttades till centrala Idre 1992. Byggnaden som i dag är Hotell
+                Fjällheim (föredetta Sporthotellet) uppfördes som skolhem i
+                slutet av 1940-talet. Ett av barnen som bodde här var Mats
+                Johnson från Lövåsen, som tillbringade tolv terminer på
+                skolhemmet i slutet av 1950-talet. Han minns varm choklad i
+                plåtmuggar, te i vita koppar och dagar fyllda av skola,
+                läxläsning, skidåkning och lek. Men berättelserna från den tiden
+                lever fortdarande kvar – i våra väggar, i minnena och hos
+                människorna som en gång kallade huset sitt hem.
               </p>
             </div>
 
             {/* Bild till höger */}
             <div className="min-h-[350px]">
               <img
-                src={bastuBild}
-                alt="Bastu på Fjällheim"
+                src={svartvitBild}
+                alt="Hotell Fjällheim"
                 className="w-full h-full min-h-[350px] object-cover"
               />
             </div>
@@ -69,47 +74,59 @@ export default function HomePage() {
             {/* Bild till vänster */}
             <div className="min-h-[350px]">
               <img
-                src={hundBild}
-                alt="Hund på Fjällheim"
+                src={personBild}
+                alt="Person på Fjällheim"
                 className="w-full h-full min-h-[350px] object-cover"
               />
             </div>
 
             {/* Text till höger */}
             <div className="px-12 py-24 text-[#3a2516]">
-              <p className="text-xl font-garamond mb-4">VI VILL</p>
-
               <p className="text-4xl font-garamond">
-                Att fler ska uppleva det som gör Dalarna så speciellt.
+                Här fortsätter berättelsen
               </p>
 
               <p className="text-lg font-lato mt-5 leading-relaxed">
-                Vi vill inspirera fler att upptäcka naturen, kulturen och lugnet
-                som finns här. Genom hållbar turism och genuina upplevelser
-                skapar vi värde för våra gäster, vår bygd och kommande
-                generationer.
+                I februari 2026 började ett nytt kapitel i Fjällheims historia
+                när vi i familjen Nielsen tog över det stora röda huset mitt i
+                Idre. Vi föll för husets historia och möjligheten att skapa den
+                sorts plats som vi själva tycker om att komma till. För oss ska
+                Fjällheim vara en plats att landa på efter dagens äventyr och
+                ladda upp inför nästa. En plats där man kan njuta av en god
+                frukost, komma hem efter en dag på fjället, koppla av i bastun
+                eller sjunka ner framför brasan med något gott att äta och
+                dricka. Framför allt vill vi skapa utrymme för att varva ner och
+                bara vara. Vi vill att Fjällheim ska kännas personligt och
+                familjärt. Inte tillrättalagt eller märkvärdigt, utan varmt,
+                välkomnande och enkelt att trivas på. En plats där vi lär känna
+                våra gäster och där både besökare och människor från byn känner
+                sig hemma.
               </p>
             </div>
           </div>
-          <div className="relative w-full">
-            <img
-              src={fjällBild}
-              alt="Fjällbild"
-              className="w-full h-[500px] object-cover object-[center_35%] -scale-x-100"
-            />
 
-            <div className="absolute top-1/3 left-0 pl-12 text-[#3a2516] font-garamond ">
-              <p className="text-xl font-garamond mb-4">
-                VÄLKOMMEN TILL FJÄLLHEIM
-              </p>
+          {/* Tredje ruta med text till vänster och bild till höger */}
+          <div className="w-full bg-[#f3e9d7] mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-stretch">
+              {/* Text till vänster */}
+              <div className="px-12 py-24 text-[#3a2516]">
+                <p className="text-4xl font-garamond mb-3">Fjällheim Friends</p>
 
-              <p className="text-4xl mb-3">En plats för alla årstider</p>
+                <p className="text-lg font-lato leading-relaxed">
+                  Bli medlem och få tillgång till fina förmåner, erbjudanden och
+                  lite extra fjällkärlek både från Hotell Fjällheim och Hotell
+                  Fridhemsgatan i Mora.
+                </p>
+              </div>
 
-              <p className="text-lg font-lato max-w-xl">
-                Oavsett om du söker äventyr, avkoppling, god mat eller en
-                inspirerande konferens. Vi ser fram emot att välkomna dig till
-                Fjällheim!
-              </p>
+              {/* Bild till höger */}
+              <div className="min-h-[350px]">
+                <img
+                  src={renBild}
+                  alt="Ren på fjället"
+                  className="w-full h-full min-h-[350px] object-cover object-[center_35%]"
+                />
+              </div>
             </div>
           </div>
         </div>
