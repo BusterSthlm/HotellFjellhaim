@@ -1,88 +1,93 @@
-import Nav from "../components/layout/Nav";
-import Footer from "../components/layout/Footer";
-import {ArrowRight} from "lucide-react";
-import ren from "../assets/Images/Bilder_aktiveter/person-med-ren.jpg";
-
-
-
-const IMG = {
-    dag:ren, 
-    overnattning:ren,
-    skraddarsydd:ren, 
-    vandring:ren,
-    mat:ren,
-    
-}
-const serif="font['Cormorant_Garmond'l Georgie serif]";
+import Featurebar from "../components/layout/FeatureBar.tsx";
+import { ArrowRight } from "lucide-react";
+import Header from "../components/layout/Header";
+import Hero from "../components/ui/Hero";
 
 const offers = [
-    {
-        img: IMG.dag,
-        titel: "Dagkonferense", 
-        text: "Text här ",
-        cta: "från 768 kr/ person",
-        href: "#dagkonferense"
-    },
-     {
-        img: IMG.overnattning,
-        titel: "Övernattning", 
-        text: "text ghär med",
-        cta: "från 768 kr/ person",
-        href: "#overnattning"
-    },
-     {
-        img: IMG.skraddarsydd,
-        titel: "Skräddarsydd", 
-        text: "text h",
-        cta: "från 768 kr/ person",
-        href: "#skaddarsydd"
-    }
+  {
+    id: 1,
+    image: "/images/konferensrum.jpg",
+    titel: "Dagskonferens",
+    text: "Ett effektivt och inspirerande möte med allt ni behöver för en lyckad dag.",
+    price: "Från 875 kr / person",
+  },
+  {
+    id: 2,
+    image: "/images/konferensrum.jpg",
+    titel: "Konferens med övernattning",
+    text: "Kombinera produktiva möten med god mat och en avkopplande natt.",
+    price: "Kontakta oss för pris",
+  },
+  {
+    id: 3,
+    image: "/images/konferensrum.jpg",
+    titel: "Möten och aktiviteter",
+    text: "Kombinera konferensen med upplevelser och aktiviteter i fjällmiljö.",
+    price: "Kontakta oss för pris",
+  },
+  {
+    id: 4,
+    image: "/images/konferensrum.jpg",
+    titel: "Skräddarsydd konferens",
+    text: "Vi hjälper er att skapa ett upplägg som passar just ert företag.",
+    price: "Enligt offert",
+  },
 ];
 
-export default function Konferens() {
-    return(
-       <>
-        <Nav/>
-        
-        <div className="bg-[#E4ECDD] text-[#2B2118]">
-        <section className="mx-auto max-w-6xl px-4 py-12 md:px-6">
-            <p className="text-sx uppercase">Vårt erbjudande </p>
-            <h2>konferens för alla behov</h2>
-            <div className="mt-6 grid gap-6 md:grid-cols-3">
-                {offers.map((o) => (
-                    <article key={o.titel} className="flex flex-col overflow-hidden rounded-lg">
-                    <img src={o.img} alt={o.titel} className="aspect-[16/9] w-full object-cover" loading="lazy" />
-                    <div className="flex flex-1 flex-col p-5">
-                        <h3 className={'${serif} text-2xl'}>{o.titel}</h3>
-                        <p className="mt-2 text-sm leading-relaxed text-[#FAECDD]">{o.text}</p>
-                        <a href={o.href} className="group mt-auto flex items-center justify-between pt-5 text-sm"/>
-                        <span className="underline underline-offset-4">{o.cta}</span>
-                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />                         
-                    </div>
-                    </article>
-                ))}
-            </div>
-        </section>
+export default function Foretag() {
+  return (
+    <>
+      <Header />
+      <Hero
+        titel="Konferens på Fjällheim"
+        description="Inspirerande möten, god mat och minnesvärda upplevelser i fjällmiljö."
+        href="#erbjudanden"
+        button="Se våra erbjudanden"
+      />
 
-        <section className="grid bg-[#5A3D28] text-[#FAECDD] md:grid-cols-[2fr_1.6fr_1fr]">
-            <img src={IMG.vandring} alt="vandring i fjällen" className="h-72 w-full object-cover md:h-full"/>
-            <div className="relative flex flex-col justify-center overflow-hidden px-6 py-12 md:px-10">
+      <section className="container-page py-14">
+        <p className="font-garamond text-lg text-[#72492C]">Våra erbjudanden</p>
 
-                <p className="text-sx uppercase ">Mer än bara möten </p>
-                <h2 className={'${serif} text-2xl text-4xl md:text-5xl'}>Stärker sammarbete med upplevelse</h2>
-                <p className="mt-4 max-w-sm text-sm">Kombinera konferense med aktiviteter som vandring, cykling, fiskning, matupplevelser eller en kväll vid lägerälden , vi hjälper er att skapa ett program som passar ert team.</p>
-            <a href="#Aktivitet" className="group mt-8 inline-flex w-fit items-center gap-3 rounded-md hover:bg-black">Utforska aktiviteter</a>
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />  
-            
-            </div>
+        <h2 className="font-garamond text-4xl text-[#3a2516] mb-10">
+          Konferens för alla behov
+        </h2>
 
-        </section>
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {offers.map((o) => (
+            <article key={o.id} className="overflow-hidden bg-white shadow-sm">
+              <img
+                src={o.image}
+                alt={o.titel}
+                className="h-56 w-full object-cover"
+              />
+
+              <div className="p-5">
+                <h3 className="font-garamond text-2xl text-[#3a2516]">
+                  {o.titel}
+                </h3>
+
+                <p className="font-lato text-base leading-relaxed mt-3">
+                  {o.text}
+                </p>
+
+                <p className="font-lato text-sm mt-4 text-[#72492C]">
+                  {o.price}
+                </p>
+
+                <a
+                  href={`mailto:booking@fjellheim.se?subject=${encodeURIComponent(
+                    `Konferensförfrågan – ${o.titel}`,
+                  )}`}
+                  className="mt-5 inline-flex items-center gap-2 font-lato text-[#72492C] hover:underline"
+                >
+                  Skicka förfrågan
+                  <ArrowRight size={18} />
+                </a>
+              </div>
+            </article>
+          ))}
         </div>
-      
-      
+      </section>
     </>
-    )
-    
-};
-
-
+  );
+}
