@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 
 import Hero from "../components/ui/Hero";
 
 import {useState} from "react";
 import {Link } from "react-router-dom";
 import {ArrowRight, ArrowLeft, BedDouble, User, Wifi, Bath, Mountain, ParkingCircle, Lock, CheckCircle2} from "lucide-react";
-=======
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -19,13 +17,11 @@ import {
 } from "lucide-react";
 import Header from "../components/layout/Header";
 import Hero from "../components/ui/Hero";
->>>>>>> 9a411395dfe78f2fef475d45c3c1555f5d046fdd
 
 const PRICE_PER_NIGHT = 1543;
 const BREAKFUST = 185;
 const LATE_CHECKOUT = 250;
 
-<<<<<<< HEAD
 const PRICE_PER_NIGHT = 3333;
 const BREAKFUST = 222;
 const LATE_CHECKOUT = 214;
@@ -39,7 +35,6 @@ const amenities = [
     {icon: Bath, text: "Badkar"},
     {icon: Mountain, text: "Utsikt mot bergen"},
     {icon: ParkingCircle, text: "Parkering"},
-=======
 const images = ["../images/Bilder_bokning/badrum.jpg"];
 const amenities = [
   { icon: BedDouble, text: "queen size säng" },
@@ -48,11 +43,9 @@ const amenities = [
   { icon: Bath, text: "Privat badrum" },
   { icon: CheckCircle2, text: "Parkering" },
 ];
->>>>>>> 9a411395dfe78f2fef475d45c3c1555f5d046fdd
 
 const kr = (n: number) => `${n.toLocaleString("sv-SE")} kr`;
 
-<<<<<<< HEAD
 ];
 
 const kr = (n: number) => `${n.toLocaleString("sv-SE")} kr`;
@@ -175,7 +168,6 @@ return(
     </div>
     </section>
     );
-=======
 function nightsBetween(from: string, to: string) {
   const diff = (new Date(to).getTime() - new Date(from).getTime()) / 86_400_000;
   return Math.max(0, Math.round(diff));
@@ -367,5 +359,4 @@ export default function Boka() {
       </section>
     </>
   );
->>>>>>> 9a411395dfe78f2fef475d45c3c1555f5d046fdd
 }
