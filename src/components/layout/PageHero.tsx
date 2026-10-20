@@ -3,7 +3,7 @@ type props = {image: string, eyebrow: string, titel:string, text:string};
 export default function PageHero({image,eyebrow, titel, text}: props){
     return(
         <section className="relativt flex min-h-[340px] items-end bg-cover bg-center md:min-h-[420px]"
-    style={{backgroundImage: `url($(image))` }}
+        style={{backgroundImage: `url($(image))` }}
         >
             <div className=" absolut inset-0  bg-gradient-to-r from-black/60 to-transparent" />
             <div className="container-page relativt pb-10 text-white">
