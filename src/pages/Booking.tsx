@@ -4,12 +4,14 @@ import { ArrowLeft, BedDouble, User, Wifi, Bath, Mountain, ParkingCircle, Lock, 
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/layout/Header";
+import rum_Vit from "../assets/images/Bilder_bokning/Rum_vit.jpg";
 
 const PRICE_PER_NIGHT = 1543;
 const BREAKFUST = 185;
 const LATE_CHECKOUT = 250;
 
-const images= ["/images/Bilder_bokning/Rum_vit.jpg"];
+
+const images= [rum_Vit];
 
 const amenities = [
     {icon: BedDouble, text: "QueenSize Bed"},
@@ -23,7 +25,7 @@ const amenities = [
 
 const kr = (n: number) => `${n.toLocaleString("sv-SE")} kr`;
 
-{/* 
+{/*
 function nightsBetween(from: string, to: string){
     const diff = (new Date(to).getTime() - new Date(from).getTime()) /86_400_00;
     return Math.max(0, Math.round(diff));
@@ -143,7 +145,7 @@ return(
     </div>
     </section>
     );
- 
+
 */}
 
 
@@ -153,10 +155,10 @@ function nightsBetween(from: string, to: string) {
 }
 
 export default function Boka() {
-  const [mainImage, setMainImage] = useState(images[0]);
-  const [checkIn, setCheckIn] = useState("2026-10-22ö");
-  const [checkOut, setCheckOut] = useState("2026-10-21");
-  const [guests, setGuests] = useState(2);
+const [mainImage, setMainImage] = useState(images[0]);
+const [checkIn, setCheckIn] = useState("2026-10-22");
+const [checkOut, setCheckOut] = useState("2026-10-21");
+const [guests, setGuests] = useState(2);
   const [breakfast, setBreakfast] = useState(false);
   const [lateCheckout, setLateCheckout] = useState(false);
   const [confirmed, setConfirmed] = useState(false);
@@ -331,7 +333,7 @@ export default function Boka() {
                 </button>
 
                 <p className="mt-3 flex items-center justify-center gap-1 text-sm">
-                    Säker betalning - Du debiteras inte för än bokningen är bekräftad.
+                    <lock size={14} /> Säker betalning - Du debiteras inte för än bokningen är bekräftad.
                 </p>
             
           </form>
