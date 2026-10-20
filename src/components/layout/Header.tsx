@@ -32,31 +32,31 @@ function Header() {
       {/* Navigering */}
       <nav className="flex items-center gap-8">
         <a
-          href="/"
+          href="/Booking"
           className="font-garamond text-lg text-[#72492C] hover:underline"
         >
           Boka
         </a>
         <a
-          href="/"
+          href="/Company"
           className="font-garamond text-lg text-[#72492C] hover:underline"
         >
           Företag
         </a>
         <a
-          href="/"
+          href="/Experience"
           className="font-garamond text-lg text-[#72492C] hover:underline"
         >
           Upplevelser
         </a>
         <a
-          href="/"
+          href="/Resturant"
           className="font-garamond text-lg text-[#72492C] hover:underline"
         >
           Restaurang
         </a>
         <a
-          href="/"
+          href="/About"
           className="font-garamond text-lg text-[#72492C] hover:underline"
         >
           Om
