@@ -8,7 +8,7 @@ export default function Featurebar({items}: {items: Feature[] }) {
             <div className="container-page grid grid-cols-2 gap-y-6 py-6 md:grid-cols-4">
                 {
                     items.map(({ icon: Icon, titel, text}, i)=>(
-                        <div key={titel} className={`flex items-center gap-3 px-4 ${i > 0 ? "md:border-1 md:border-brown/30": ""}`}
+                        <div key={titel} className={`flex items-center gap-3 px-4 ${i > 0 ? "md:border-l md:border-brown/30": ""}`}
                         >
                     <Icon size={26} strokeWidth={1.5}/>
                     <div>
