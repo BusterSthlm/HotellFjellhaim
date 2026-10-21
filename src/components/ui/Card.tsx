@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import image from "../../assets/Images/Bilder_bokning/Rum_vit.jpg";
 
-export type Room = {
+export type Room = {git shortlog -sne --all
     id: number;
     name: string;
     description: string;
