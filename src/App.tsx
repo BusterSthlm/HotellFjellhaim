@@ -5,7 +5,6 @@ import HomePage from "./pages/HomePage";
 import Activities from "./pages/Activites";
 import About from "./pages/About";
 import Booking from "./pages/Booking";
-import Contact from "./pages/Contact";
 import Company from "./pages/Company";
 import Experience from "./pages/Experience";
 import Resturant from "./pages/Resturant";

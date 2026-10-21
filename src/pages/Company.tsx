@@ -1,5 +1,6 @@
-import Nav from "../components/layout/Nav";
-import Footer from "../components/layout/Footer";
+import Featurebar from "../components/layout/FeatureBar.tsx";
+import { ArrowRight } from "lucide-react";
+import Header from "../components/layout/Header";
 import Hero from "../components/ui/Hero";
 
 type Card = {

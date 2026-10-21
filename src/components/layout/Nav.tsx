@@ -35,7 +35,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <header className="sticky top-0 left-0 w-full bg-white shadow-md z-50">
       <nav
         aria-label="Huvudmeny"
         className="flex items-center justify-between px-4 py-3"
