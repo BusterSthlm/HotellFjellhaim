@@ -3,73 +3,93 @@ import Footer from "../components/layout/Footer";
 import Hero from "../components/ui/Hero";
 
 type Card = {
-    image:string;
-    titel:string;
-    text:string;
-    linkLabel:string;
-    href:string;
-}
+  image: string;
+  titel: string;
+  text: string;
+  linkLabel: string;
+  href: string;
+};
 
-const card: Card[]= [
-    {
-        image: "/images/bilder_om/sporthotellet.jpg", 
-        titel: "möten och konferensen",
-        text: "text",
-        linkLabel: "se våra lokaler",
-        href: "#konferens",  
+const cards: Card[] = [
+  {
+    image: "/images/bilder_om/sporthotellet.jpg",
+    titel: "Möten och konferenser",
+    text: "Moderna lokaler i en naturnära miljö.",
+    linkLabel: "Se våra lokaler",
+    href: "#konferens",
+  },
+  {
+    image: "/images/bilder_om/sporthotellet.jpg",
+    titel: "Boende",
+    text: "Hitta ett rum för en avkopplande vistelse.",
+    linkLabel: "Se våra rum",
+    href: "#boende",
+  },
+];
 
-    }, 
-    {
-        image: "/images/bilder_om/sporthotellet.jpg", 
-        titel: "Boende",
-        text: "texter",
-        linkLabel: "se våra rum",
-        href: "#konferens",  
-
-    }, 
-]
-
-export default function FeaturedCards(){
-    return(
-        <section className="bg white py-20">
-            <div className="grid max-w-6xl gap-12 px-6 md:gap-16">
-
-            {FeaturedCards.map(card)=> (
-                <article key={card.titel} className="group flex flex-col"></article>
-                <div className="overflown-hidden">
-                    <img src={card.image} className="h-full w-full object cover transition transtion-transform-duration-500 group hover:scale-105"> 
-                    </img>
-                </div>
-
-            )};
-
-            </div>
-        </section>
-    )
-}
-
-export default function HomePage(){
-
-    return (
-        <>
-        <Nav/>
-        <Hero  titel="Välkommen till hotell Fjellheim" description="Ett fjällhotell med värme och karaktär" href="/booking"  /> 
-        <main className="flex flex-col items-center justify-center w-full  text-center bg-secondary">
-        <h1>Boka konferenserum idag </h1>
-        <section aria-label="banner" className="px-4 md:px-8 mt-6">
-        </section>
-
-        <section aral-label="Info" className="bg white m-5 p-10 justify-center">
-            <div className="m-1 text-center">
-                <h1>Möten och konferenser </h1>
-                <p>Modern lokaler i naturlig miljö</p>
+function FeaturedCards() {
+  return (
+    <section className="bg-white py-20">
+      <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-2 md:gap-16">
+        {cards.map((card) => (
+          <article key={card.titel} className="group flex flex-col">
+            <div className="overflow-hidden">
+              <img
+                src={card.image}
+                alt={card.titel}
+                className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
             </div>
 
-        </section>
-        
-        </main>
-        <Footer />
-        </>
-    );
+            <h2 className="mt-4 text-2xl font-semibold">{card.titel}</h2>
+
+            <p className="mt-2">{card.text}</p>
+
+            <a href={card.href} className="mt-4 underline">
+              {card.linkLabel}
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }
 
+export default function HomePage() {
+  return (
+    <>
+      <Nav />
+
+      <Hero
+        titel="Välkommen till hotell Fjellheim"
+        description="Ett fjällhotell med värme och karaktär"
+        href="/booking"
+      />
+
+      <main className="flex w-full flex-col items-center bg-secondary text-center">
+        <h1 className="mt-8 text-3xl font-semibold">Boka konferensrum idag</h1>
+
+        <section
+          id="konferens"
+          aria-label="Möten och konferenser"
+          className="mt-6 w-full px-4 py-10 md:px-8"
+        >
+          <h2 className="text-2xl font-semibold">Möten och konferenser</h2>
+          <p>Moderna lokaler i naturlig miljö.</p>
+        </section>
+
+        <section
+          id="boende"
+          aria-label="Boende"
+          className="w-full px-4 py-10 md:px-8"
+        >
+          <h2 className="text-2xl font-semibold">Boende</h2>
+        </section>
+
+        <FeaturedCards />
+      </main>
+
+      <Footer />
+    </>
+  );
+}
