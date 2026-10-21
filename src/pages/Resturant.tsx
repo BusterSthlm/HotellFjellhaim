@@ -90,6 +90,11 @@ export default function MatOchDryck() {
               Njut av en generös frukostbuffe med lokala råvaror , nybakat bröd,
               varma och kalla alternativ
             </h2>
+            <p>
+
+Det ska vara bekvämt och kännas lyxigt att bo på hotell och frukost är bästa starten på dagen. På vår omtyckta frukostbuffé hittar du bland annat hembakad lingonlimpa, croassanter, olika sorters ort och smörgåspålägg, kokt ägg, frukt och juice, fil, yoghurt med flingor, müsli och fröer. Självklart har vi riktigt gott kaffe. Våfflor gräddar du själv och toppar med det du önskar, exempel sylt och grädde eller nutella.
+
+Välkommen på frukost även om du inte bor hos oss, 185,-/person </p>
 
             <div className="mt-10 grid gap-8 sm:grid-cols-2">
               <div className="flex gap-4">
