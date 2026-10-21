@@ -1,61 +1,28 @@
-import Footer from "../components/layout/Footer";
-import Hero from "../components/ui/Hero";
+import FeatureBar from "../components/layout/FeatureBar";
 import Header from "../components/layout/Header";
 import {
   ArrowRight,
-  CalendarDays,
   Clock,
   Coffee,
-  Coins,
   Leaf,
   Wine,
 } from "lucide-react";
-import ren from "../assets/Images/Bilder_aktiveter/person-med-ren.jpg";
+import heroImage from "../assets/Images/Bilder_resturang/IMG_7854.jpg";
+import frukostImage from "../assets/Images/Bilder_resturang/IMG_7860.jpg";
+import restaurantImage from "../assets/Images/Bilder_resturang/IMG_7858.jpg";
+import diningImage from "../assets/Images/Bilder_resturang/IMG_7862.jpg";
+import ambienteImage from "../assets/Images/Bilder_resturang/IMG_8020.jpg";
 
 const IMG = {
-  hero: ren,
-  frukost: ren,
-  retsturang1: ren,
-  resturang2: ren,
-  miljo: ren,
-  host: ren,
+  hero: heroImage,
+  frukost: frukostImage,
+  retsturang1: restaurantImage,
+  resturang2: diningImage,
+  miljo: ambienteImage,
 };
 
-const serif = "font-['Cormorant_Garmond' serif]";
 const label = "text-xs uppercase tracking-[0.2em]";
 
-const features = [
-  {
-    icon: Leaf,
-    titel: "lokala råvaror",
-    text: "från närområdet",
-  },
-  {
-    icon: CalendarDays,
-    titel: "lokala råvaror",
-    text: "från närområdet",
-  },
-  {
-    icon: Wine,
-    titel: "lokala råvaror",
-    text: "från närområdet",
-  },
-  {
-    icon: Coffee,
-    titel: "lokala råvaror",
-    text: "från närområdet",
-  },
-  {
-    icon: Coins,
-    titel: "lokala råvaror",
-    text: "från närområdet",
-  },
-  {
-    icon: Clock,
-    titel: "lokala råvaror",
-    text: "från närområdet",
-  },
-];
 const hours = [
   {
     titel: "Frukostbuffe",
@@ -83,42 +50,35 @@ const hours = [
 export default function MatOchDryck() {
   return (
     <>
-      <Header />
-      <Hero
-        titel="Hotell Fjellheim"
-        description="Ett varmt hotell"
-        href="/booking"
-        button="Klicka här för att boka rum"
-      />
+      <Header overImage />
       <main className="bg-[#FAECDD] text-[#2b2118]">
         <section
-          className="relative flex min-h-[420px] items-end bg-cover bg-center text-[#f4ECDD]"
-          style={{ backgroundImage: "url{IMG.hero}" }}
+          className="relative flex min-h-[520px] items-end bg-cover bg-center px-6 pb-12 pt-32 text-[#f4ECDD] md:min-h-[620px]"
+          style={{ backgroundImage: `url(${IMG.hero})` }}
         >
-          <p className="{label}">Mat och dryck</p>
-          <h1>Smak som hör hemma här</h1>
-          <p>
-            lokal råvaror och säsonginspirerade måltider som gör varje måltid
-            lite speciell
-          </p>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
+          <div className="container-page relative">
+            <p className={label}>Mat och dryck</p>
+            <h1 className="mt-4 max-w-2xl text-5xl leading-tight text-white md:text-7xl">
+              Smak som hör hemma här
+            </h1>
+            <p className="mt-4 max-w-xl text-lg text-white">
+              Lokala råvaror och säsongsinspirerade måltider som gör varje
+              måltid lite speciell.
+            </p>
+          </div>
         </section>
 
-        <section className="border-b border-[#2b2118]/15">
-          <ul className="mx-auto grid max-w-6xl grid-cols-2 md:grid-cols-4">
-            {features.map(({ icon: Icon, titel, text }) => (
-              <li
-                key={titel}
-                className="flex items-center gap-3 border-[#2b2118]/15 px-4 py-5 md:justify-center md:border-1"
-              >
-                <Icon className="h-5 w-5 shrink-0" aria-hidden />
-                <p>{titel}</p>
-                <p>{text}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
+        <FeatureBar
+          items={[
+            { icon: Leaf, titel: "Lokala råvaror", text: "från närområdet" },
+            { icon: Coffee, titel: "Frukost", text: "varje morgon" },
+            { icon: Wine, titel: "Restaurang och bar", text: "året runt" },
+            { icon: Clock, titel: "Öppettider", text: "för alla tillfällen" },
+          ]}
+        />
 
-        <section className="grid md: grid-cols-2">
+        <section className="grid md:grid-cols-2">
           <img
             src={IMG.frukost}
             alt="Frukostbuffe"
@@ -142,9 +102,9 @@ export default function MatOchDryck() {
                   <p>Tider</p>
                   <div className="flex justify-between gap-6">
                     {hours[0].rows.map(([dag, tid]) => (
-                      <div>
+                      <div key={dag}>
                         <dt>{dag}</dt>
-                        <dt>{tid}</dt>
+                        <dd>{tid}</dd>
                       </div>
                     ))}
                   </div>
@@ -159,39 +119,40 @@ export default function MatOchDryck() {
             <p>Resturang och bar</p>
             <h2 className="">Mat, dryck och sällskap året runt</h2>
             <p>
-              Vår resturang erbjuder vällagade rätter med inspiration fårn
+              Vår restaurang erbjuder vällagade rätter med inspiration från
               Dalarna och säsongens råvaror. I baren hittar du välkomponerade
-              drycket, lokala favoriter och en avslappnad atmosfär - perfekt
-              efter en dag i nature.
+              drycker, lokala favoriter och en avslappnad atmosfär – perfekt
+              efter en dag i naturen.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#meny" className="bg-[#6b3f22] hover:bg-[#6b3f22] " /> se
-              vår meny <ArrowRight className="h-4 w-4 aria-hidden" />
-              <a href="Boka"> boka bord</a>
-            </div>
+            <a
+              href="mailto:booking@fjallheim.se?subject=Bordsbokning"
+              className="mt-8 inline-flex items-center gap-2 rounded-md bg-[#6b3f22] px-5 py-3 text-white transition hover:bg-[#4e2d18]"
+            >
+              Boka bord <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </a>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid min-h-72 grid-cols-2 gap-3">
             <img
               src={IMG.retsturang1}
               alt="Dukat bord i resturang"
-              className="rounded object-cover"
+              className="h-full min-h-72 w-full rounded object-cover"
             />
             <img
               src={IMG.resturang2}
               alt="Dukat bord i resturang"
-              className="rounded object-cover"
+              className="h-full min-h-72 w-full rounded object-cover"
             />
           </div>
         </section>
 
         <section
           className="relative flex min-h-[320px] items-center bg-cover bg-center md:min-h-[400px]"
-          style={{ backgroundImage: "url(${IMG.miljo})" }}
+          style={{ backgroundImage: `url(${IMG.miljo})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black-40 to-transparent" />
-          <div className="relative max-auto w-full max-w-6xl px-6">
-            <h2 className="text-3xl leading-tight md:text-4xl">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+          <div className="container-page relative w-full text-white">
+            <h2 className="text-3xl leading-tight text-white md:text-4xl">
               Lokala smaker i unik miljö
             </h2>
             <p className="mt-3 max-w-xs text-sm text-[#FAECDD]">
@@ -201,11 +162,11 @@ export default function MatOchDryck() {
           </div>
         </section>
 
-        <section className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md: grid-cols-[1gr_1.4fr] md:items-center">
-          <div className="mt-8 grid gap-8 sm:grid-cols-3">
+        <section id="opening-hours" className="container-page grid gap-10 py-16 md:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-3 md:col-span-3">
             {hours.map(({ titel, rows }) => (
               <div key={titel}>
-                <h3>{titel}</h3>
+                <h3 className="text-xl font-semibold">{titel}</h3>
                 <dl className="mt-3 space-y-1 text-sm">
                   {rows.map(([dag, tid]) => (
                     <div key={dag} className="flex justify-between gap-4">

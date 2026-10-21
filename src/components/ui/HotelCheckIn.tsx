@@ -48,7 +48,7 @@ export default function HotelCheckIn() {
           <button
             type="button"
             onClick={() => checkinRef.current?.showPicker()}
-            className="text-left text-sm text-gray-700 font-Lato"
+            className="text-left text-sm text-gray-700 font-lato"
           >
             {checkin || "Välj datum"}
           </button>
@@ -81,7 +81,7 @@ export default function HotelCheckIn() {
           <button
             type="button"
             onClick={() => checkoutRef.current?.showPicker()}
-            className="text-left text-sm text-gray-700 font-Lato"
+            className="text-left text-sm text-gray-700 font-lato"
           >
             {checkout || "Välj datum"}
           </button>

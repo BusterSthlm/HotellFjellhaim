@@ -7,26 +7,27 @@ import renBild from "../assets/Images/Bilder_om/ren.jpg";
 export default function HomePage() {
   return (
     <>
-      <Header />
+      <Header overImage />
 
       <main className="w-full bg-secondary">
         <div className="relative w-full">
           <img
             src={aboutBild}
             alt="Fjällbild"
-            className="w-full h-[500px] object-cover object-[center_30%]"
+            className="h-[500px] w-full object-cover object-[center_30%]"
           />
 
-          <div className="absolute top-1/3 left-0 pl-12 text-white font-garamond mt-30">
-            <p className="text-2xl mb-2">OM FJÄLLHEIM</p>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
+          <div className="absolute left-0 top-1/3 max-w-3xl px-6 font-garamond text-white sm:px-12">
+            <p className="mb-2 text-2xl">OM FJÄLLHEIM</p>
 
-            <p className="text-4xl mb-3">
+            <p className="mb-3 text-4xl">
               Mer än ett hotell.
               <br />
               En plats att landa på.
             </p>
 
-            <p className="text-lg font-lato max-w-xl">
+            <p className="max-w-xl font-lato text-lg">
               Genom Dalarnas natur erbjuder vi en unik kombination av boende,
               mat, upplevelser och möten året runt.
             </p>

@@ -1,17 +1,19 @@
 
-import Hero from "../components/ui/Hero";
 import { ArrowLeft, BedDouble, User, Wifi, Bath, Mountain, ParkingCircle, Lock, CheckCircle2} from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/layout/Header";
-import rum_Vit from "../assets/images/Bilder_bokning/Rum_vit.jpg";
+import rum_Vit from "../assets/Images/Bilder_bokning/Rum_vit.jpg";
+import rum1 from "../assets/Images/Bilder_bokning/rum1.jpg";
+import rum2 from "../assets/Images/Bilder_bokning/rum2.jpg";
+import rum22 from "../assets/Images/Bilder_bokning/rum22.jpg";
 
 const PRICE_PER_NIGHT = 1543;
-const BREAKFUST = 185;
+const BREAKFAST = 185;
 const LATE_CHECKOUT = 250;
 
 
-const images= [rum_Vit];
+const images= [rum_Vit, rum1, rum2, rum22];
 
 const amenities = [
     {icon: BedDouble, text: "QueenSize Bed"},
@@ -42,37 +44,33 @@ const [guests, setGuests] = useState(2);
 
   const nights = nightsBetween(checkIn, checkOut);
   const roomCost = nights * PRICE_PER_NIGHT;
-  const breakfastCost = breakfast ? BREAKFUST * guests * nights : 0;
+  const breakfastCost = breakfast ? BREAKFAST * guests * nights : 0;
   const lateCost = lateCheckout ? LATE_CHECKOUT : 0;
   const total = roomCost + breakfastCost + lateCost;
 
   if (confirmed) {
     return (
-      <section className="container-page flex flex-col items-center py-24 text-center">
-        <CheckCircle2 size={64} className="text-forest" />
-        <h1 className="mt-4 text-5xl">Tack för din bokning</h1>
-        <p className="mt-4 max-w-md">
-          Fjällsvit {nights} nätter för {guests} gäster({checkIn} - {checkOut}).
-          total {kr(total)}.
-        </p>
-        <Link to="/" className="btn-brown mt-8">
-          
-          TILL STARTSIDAN 
-        </Link>
-      </section>
+      <>
+        <Header />
+        <section className="container-page flex flex-col items-center py-24 pt-36 text-center">
+          <CheckCircle2 size={64} className="text-forest" />
+          <h1 className="mt-4 text-5xl">Tack för din bokning</h1>
+          <p className="mt-4 max-w-md">
+            Fjällsvit {nights} nätter för {guests} gäster ({checkIn}–{checkOut}).
+            Totalt {kr(total)}.
+          </p>
+          <Link to="/" className="mt-8 rounded-md bg-brown px-6 py-3 font-lato text-cream">
+            Till startsidan
+          </Link>
+        </section>
+      </>
     );
   }
   return (
     <>
       <Header />
-      <Hero
-        titel="Konferens på Fjällheim"
-        description="Inspirerande möten, god mat och minnesvärda upplevelser i fjällmiljö."
-        href="#erbjudanden"
-        button="Se våra erbjudanden"
-      />
-      <section className="container-page py-10">
-        <Link to="/" className="mb-6 inline-flex " aria-label="Tillbaka">
+      <section className="container-page py-10 pt-32">
+        <Link to="/" className="mb-6 inline-flex rounded-full p-2 hover:bg-brown/10" aria-label="Tillbaka till startsidan">
           <ArrowLeft size={32} />
         </Link>
 
@@ -159,21 +157,21 @@ const [guests, setGuests] = useState(2);
               </label>
 
               <div className="mt-6 border-t border-forest pt-4">
-                <h3 className="font-sans text-xl font-bold"> Tillägg</h3>
+                <h3 className="font-sans text-xl font-bold">Tillägg</h3>
 
                 <label className="mt-4 flex cursor-pointer items-start gap-4">
                   <input
                     type="checkbox"
                     checked={lateCheckout}
-                    onChange={(e) => setBreakfast(e.target.checked)}
+                    onChange={(e) => setLateCheckout(e.target.checked)}
                     className="mt-1 size-7 accent-forest"
                   />
                   <span className="flex-1">
                     <span className="block text-xl">Sen utcheckning</span>
-                    <span className=" text-sm">{LATE_CHECKOUT} kr / person</span>
+                    <span className="text-sm">{LATE_CHECKOUT} kr / rum</span>
                   </span>
                   <span className="text-xl">
-                    {kr(BREAKFUST * guests * nights)}
+                    {kr(LATE_CHECKOUT)}
                   </span>
                 </label>
 
@@ -181,14 +179,14 @@ const [guests, setGuests] = useState(2);
                   <input
                     type="checkbox"
                     checked={breakfast}
-                    onChange={(e) => setLateCheckout(e.target.checked)}
+                    onChange={(e) => setBreakfast(e.target.checked)}
                     className="mt-1 size-7 accent-forest"
                   />
                   <span className="flex-1">
                     <span className="block text-xl">Frukost</span>
-                    <span className=" text-sm">250 kr / rum</span>
+                    <span className="text-sm">{BREAKFAST} kr / person och natt</span>
                   </span>
-                  <span className="text-xl">{kr(LATE_CHECKOUT)}</span>
+                  <span className="text-xl">{kr(BREAKFAST * guests * nights)}</span>
                 </label>
               </div>
 
@@ -205,9 +203,9 @@ const [guests, setGuests] = useState(2);
                 </p>
               )}
 
-              <button type="submit" 
-              disabled={nights < 1} 
-              className=" bg-green group mt-8 flex-w-full items-center justify-center gap-3 rounded-xl px-6 py-5 font-semibold text-secondary shadow-md transition-all duration-200 hover:-translate-1">
+              <button type="submit"
+              disabled={nights < 1}
+              className="group mt-8 flex w-full items-center justify-center gap-3 rounded-xl bg-green px-6 py-5 font-semibold text-secondary shadow-md transition-all duration-200 hover:-translate-y-1 disabled:cursor-not-allowed disabled:opacity-50">
                 Boka {kr(total)}
                 </button>
 

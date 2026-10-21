@@ -1,11 +1,5 @@
-import Navbar from "../../styles/navbar.module.css";
+import Header from "./Header";
 
-function App(){
-    <>
-    return(
-        <Navbar />
-    )</>
-
+export default function Navbar() {
+  return <Header />;
 }
-
-export default App;

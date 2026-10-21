@@ -9,17 +9,12 @@ type FooterLink = {
 };
 
 const LINKS: FooterLink[] = [
-  { label: "Boka", href: "/Booking" },
-  { label: "Företag", href: "/Company" },
-  { label: "Upplevelser", href: "/Activities" },
-  { label: "Restaurang", href: "/Resturant" },
-  { label: "Om oss", href: "/About" },
-];
-
-const SocialLinks = [
-  { label: "Facebook", href: "https://www.facebook.com/yourpage" },
-  { label: "Instagram", href: "https://www.instagram.com/yourpage" },
-  { label: "Twitter", href: "https://twitter.com/yourpage" },
+  { label: "Boka", href: "/booking" },
+  { label: "Företag", href: "/company" },
+  { label: "Upplevelser", href: "/experience" },
+  { label: "Restaurang", href: "/restaurant" },
+  { label: "Om oss", href: "/about" },
+  { label: "Kontakt", href: "/contact" },
 ];
 
 export default function Footer() {
@@ -41,7 +36,7 @@ export default function Footer() {
           </div>
 
           {/* Alla länkar till höger */}
-          <div className="flex flex-col gap-10 sm:flex-row sm:gap-72">
+          <div className="flex flex-col gap-10 sm:flex-row sm:gap-16 lg:gap-24">
             {/* Navigeringslänkar */}
             <nav aria-label="Sidfotens navigering">
               <ul className="flex flex-col gap-3">
@@ -61,7 +56,7 @@ export default function Footer() {
             {/*Kontakt*/}
             <div>
               <h2 className="mb-4 font-garamond text-xl text-white">Kontakt</h2>
-              <h2 className="mb-4 font-lato text-sm text-white">
+              <p className="font-lato text-sm text-white">
                 Högstvägen 7 <br />
                 791 71 Idre <br />
                 booking@fjallheim.se
@@ -69,7 +64,7 @@ export default function Footer() {
                 +46 (0)25320070
                 <br />
                 org 559568-0348
-              </h2>
+              </p>
             </div>
             {/* Sociala medier */}
             <div>
