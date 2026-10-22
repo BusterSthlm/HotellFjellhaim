@@ -20,7 +20,7 @@ export default function HomePage() {
         <Header overImage />
 
         <main className="relative px-6 pt-32 sm:px-10 sm:pt-40">
-          <p className="pt-20 text-left text-secondary sm:pt-28  text-bold">
+          <p className="pt-20 text-left text-secondary sm:pt-28  text-bold mt-65">
             
             Välkommen till Fjellheim
           </p>

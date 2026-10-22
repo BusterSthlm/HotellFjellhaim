@@ -32,7 +32,7 @@ function Header({ overImage = false }: HeaderProps) {
           <img
             src={isTransparent ? lightLogo : logo}
             alt="Logotyp"
-            className="block h-14 w-auto object-contain sm:h-[75px]"
+            className="block h-14 w-auto object-contain sm:h-[75px] "
           />
         </Link>
 

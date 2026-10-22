@@ -170,7 +170,7 @@ export default function HotelCheckIn() {
             <button
               type="button"
               onClick={() => setGuestMenuOpen(false)}
-              className="mt-2 w-full rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-[#f3e9d7] hover:bg-gray-700"
+              className="mt-2 w-full rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-secondary hover:bg-tertiary"
             >
               Klart
             </button>

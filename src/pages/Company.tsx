@@ -98,6 +98,7 @@ export default function Foretag() {
             >
               Utforska aktiviteter <ArrowRight aria-hidden="true" />
             </Link>
+            <br />
           </div>
           <div className="hidden min-h-[360px] flex-col gap-2 md:flex">
             <img
