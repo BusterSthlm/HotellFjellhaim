@@ -47,16 +47,16 @@ export default function MatOchDryck() {
       <Header overImage />
       <main className="bg-[#F3E9D7] text-[#2b2118]">
         <section
-          className="relative flex min-h-[520px] items-end bg-cover bg-center px-6 pb-12 pt-32 text-[#f4ECDD] md:min-h-[620px]"
+          className="relative flex min-h-[520px] items-end bg-cover bg-center px-6 pb-12 pt-32 text-white md:min-h-[620px]"
           style={{ backgroundImage: `url(${IMG.hero})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
           <div className="container-page relative">
             <p className={label}>Mat och dryck</p>
-            <h2 className="text-5xl leading-tight text-[#f3e9d7] md:text-6xl ">
+            <h2 className="text-5xl leading-tight text-white md:text-6xl ">
               Smaker som hör hemma här
             </h2>
-            <p className="mt-4 max-w-xl text-lg text-[#f3e9d7]">
+            <p className="mt-4 max-w-xl text-lg text-white">
               Lokala råvaror och säsongsinspirerade måltider som gör varje
               måltid lite speciell.
             </p>
@@ -79,7 +79,7 @@ export default function MatOchDryck() {
             className="h-72 w-full object-cover md:h-full"
           />
           <div className="bg-[#3f4a35] px-6 py-12 text-[#f3e9d7] md:px-12">
-            <h2 className="text-[#f3e9d7] font-serif ">Frukost</h2>
+            <h2 className="text-[#f3e9d7] font-serif ">Frukost</h2> 
             <p className="text-[#f3e9d7]">
               Det ska vara bekvämt och kännas lyxigt att bo på hotell och
               frukost är bästa starten på dagen. På vår omtyckta frukostbuffé
@@ -87,16 +87,21 @@ export default function MatOchDryck() {
               sorters ost och smörgåspålägg, kokt ägg, frukt och juice, fil,
               yoghurt med flingor, müsli och fröer. Självklart har vi riktigt
               gott kaffe. Våfflor gräddar du själv och toppar med det du önskar,
-              exempel sylt och grädde eller nutella. Välkommen på frukost även
-              om du inte bor hos oss, 185,-/person
-            </p>
+              exempel sylt och grädde eller nutella. 
+            </p><br />
+            <p>Välkommen på frukost även
+              om du inte bor hos oss, 185 kr /person</p>
+
+           
+
           </div>
         </section>
 
         <section className="grid gap-10 md:grid-cols-2 md:items-center">
           <div className="px-6 py-12 md:px-12">
-            <h2 className="font-bold">Restaurang & bar</h2>
+            <h2 className="font-bold text-primary">Restaurang & bar</h2>
             <p>
+              
               Restaurangen varierar efter säsong. Baren är välfylld med dryck
               från Mora Bryggeri, ölsorter som Njupeskär, Dalapils, Dala ipa och
               Koppar är vi extra stolta över. Sälens Fjällbryggeri fjälldimma är

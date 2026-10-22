@@ -20,16 +20,16 @@ export default function HomePage() {
         <Header overImage />
 
         <main className="relative px-6 pt-32 sm:px-10 sm:pt-40">
-          <p className="pt-20 text-left text-[#F3E9D7] sm:pt-28">
-            HOTELL I DALARNA
+          <p className="pt-20 text-left text-secondary sm:pt-28  text-bold">
+            
+            Välkommen till Fjellheim
           </p>
 
-          <h1 className="text-left text-5xl text-[#F3E9D7] sm:text-6xl">
-            En plats att
-            <br /> landa på
+          <h1 className="text-left text-5xl text-secondary sm:text-6xl">
+           Din plats att njuta i fjällen
           </h1>
 
-          <p className="mb-14 mt-4 text-left text-[#F3E9D7] sm:mb-20">
+          <p className="mb-14 mt-4 text-left text-secondary sm:mb-20">
             Natur, avkoppling och äventyr - året runt.
           </p>
 
@@ -44,8 +44,8 @@ export default function HomePage() {
           <div className="flex flex-col gap-8 md:flex-row md:items-stretch md:gap-10">
             {/* Text till vänster */}
             <div className="min-w-0 flex-1">
-              <h3 className="mt-10  text-left text-serif text-[#F3E9D7]">
-                VÄLKOMMEN TILL FJÄLLHEIM
+              <h3 className="mt-10  text-left text-serif text-secondary">
+                Hotell i Dalarna
               </h3>
 
               <h2 className="text-left text-5xl text-[#F3E9D7]">

@@ -59,9 +59,11 @@ const [guests, setGuests] = useState(2);
             Fjällsvit {nights} nätter för {guests} gäster ({checkIn}–{checkOut}).
             Totalt {kr(total)}.
           </p>
+          {/*
           <Link to="/" className="mt-8 rounded-md bg-brown px-6 py-3 font-lato text-cream">
             Till startsidan
           </Link>
+           */}
         </section>
       </>
     );
@@ -71,7 +73,7 @@ const [guests, setGuests] = useState(2);
       <Header />
       <section className="container-page py-10 pt-32">
         <Link to="/" className="mb-6 inline-flex rounded-full p-2 hover:bg-brown/10" aria-label="Tillbaka till startsidan">
-          <ArrowLeft size={32} />
+          {/* <ArrowLeft size={32} /> */}
         </Link>
 
         <div className="grid gap-10 lg:grid-cols-2 lg:divide-x lg:divide-forest">

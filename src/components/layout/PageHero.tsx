@@ -7,9 +7,9 @@ export default function PageHero({image ,eyebrow, title, text}: props){
         >
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" />
             <div className="container-page relative pb-10 text-white">
-                <p className="eyebrow font-semibold">{eyebrow}</p>
+                <p className="eyebrow font-semibold text-serif">{eyebrow}</p>
                 <h1 className="max-w-md text-4xl font-bold leading-tight text-white md:text-5xl font-serif">{title}</h1>
-                <p className="text font-semibold">{text}</p>
+                <p className="text font-semibold text-serif">{text}</p>
             </div>
 
         </section>
