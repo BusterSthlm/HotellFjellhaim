@@ -19,9 +19,9 @@ const LINKS: FooterLink[] = [
 
 export default function Footer() {
   return (
-    <footer className="bg-primary py-10 text-white">
+    <footer className="bg-primary py-10 text-[#F3E9D7]">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col gap-8 md:flex-row md:items-start md:gap-16">
+        <div className="flex flex-col gap-8 md:flex-row md:items-start md:gap- lg:gap-56">
           {/* Logotyp och fjällbild till vänster */}
           <div className="flex shrink-0 flex-col items-start">
             <Link to="/">
@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
 
           {/* Alla länkar till höger */}
-          <div className="flex flex-col gap-10 sm:flex-row sm:gap-16 lg:gap-24">
+          <div className="flex flex-col gap-10 sm:flex-row sm:gap-20 lg:gap-48">
             {/* Navigeringslänkar */}
             <nav aria-label="Sidfotens navigering">
               <ul className="flex flex-col gap-3">
@@ -55,8 +55,10 @@ export default function Footer() {
 
             {/*Kontakt*/}
             <div>
-              <h2 className="mb-4 font-garamond text-xl text-white">Kontakt</h2>
-              <p className="font-lato text-sm text-white">
+              <h2 className="mb-4 font-garamond text-xl text-[#F3E9D7]">
+                Kontakt
+              </h2>
+              <p className="font-lato text-sm text-[#F3E9D7]">
                 Högstvägen 7 <br />
                 791 71 Idre <br />
                 booking@fjallheim.se
@@ -68,7 +70,7 @@ export default function Footer() {
             </div>
             {/* Sociala medier */}
             <div>
-              <h2 className="mb-4 font-garamond text-xl text-white">
+              <h2 className="mb-4 font-garamond text-xl text-[#F3E9D7]">
                 Följ oss
               </h2>
 
@@ -78,7 +80,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Besök oss på Facebook"
-                  className="text-white transition hover:text-[#F3E9D7]"
+                  className="[#F3E9D7] transition hover:text-[#F3E9D7]"
                 >
                   <FaFacebook size={28} />
                 </a>

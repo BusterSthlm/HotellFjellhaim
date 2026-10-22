@@ -38,10 +38,10 @@ export default function HomePage() {
       </div>
 
       {/* Beige sektion under bilden */}
-      <section className="w-full bg-[#F3E9D7] px-4 py-8 sm:px-6">
+      <section className="w-full bg-[#F3E9D7] py-8">
         {/* Brun ruta */}
-        <div className="min-h-[500px] w-auto rounded-bl-xl bg-[#3a2516] p-6">
-          <div className="flex flex-col items-stretch gap-8 md:flex-row md:items-center md:gap-10">
+        <div className="min-h-[500px] w-full bg-[#3a2516] pl-6 pr-0 sm:pl-10">
+          <div className="flex flex-col gap-8 md:flex-row md:items-stretch md:gap-10">
             {/* Text till vänster */}
             <div className="min-w-0 flex-1">
               <p className="mb-5 text-left text-[#F3E9D7]">
@@ -61,18 +61,18 @@ export default function HomePage() {
 
               <a
                 href="/dalarna"
-                className="mt-4 block text-left font-garamond text-[#F3E9D7] hover:underline"
+                className="mt-4 block text-left font-lato text-[#F3E9D7] hover:underline"
               >
                 Upptäck Dalarna →
               </a>
             </div>
 
             {/* Bild till höger */}
-            <div className="min-w-0 flex-1 overflow-hidden rounded-2xl">
+            <div className="min-w-0 flex-1 md:self-stretch">
               <img
                 src={dogimage}
                 alt="Fjällheim och den omgivande naturen"
-                className="h-[320px] w-full object-cover sm:h-[420px] md:h-[500px]"
+                className="h-[320px] w-full object-cover sm:h-[420px] md:h-full md:min-h-[500px]"
               />
             </div>
           </div>
@@ -97,19 +97,33 @@ export default function HomePage() {
           {/* Platshållare för två cards till höger */}
           <div className="grid min-w-0 flex-1 grid-cols-1 gap-4 sm:grid-cols-2">
             {[
-              { image: roomImage, title: "Dubbelrum", description: "Ett ombonat rum för en avkopplande vistelse." },
-              { image: suiteImage, title: "Fjällsvit", description: "Mer utrymme att landa efter dagens äventyr." },
+              {
+                image: roomImage,
+                title: "Dubbelrum",
+                description: "Ett ombonat rum för en avkopplande vistelse.",
+              },
+              {
+                image: suiteImage,
+                title: "Fjällsvit",
+                description: "Mer utrymme att landa efter dagens äventyr.",
+              },
             ].map((room) => (
               <Link
                 key={room.title}
                 to="/booking"
                 className="group overflow-hidden rounded-xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
               >
-                <img src={room.image} alt={room.title} className="h-56 w-full object-cover" />
+                <img
+                  src={room.image}
+                  alt={room.title}
+                  className="h-56 w-full object-cover"
+                />
                 <div className="p-5">
                   <h2 className="text-2xl font-semibold">{room.title}</h2>
-                  <p className="mt-2 text-sm">{room.description}</p>
-                  <span className="mt-4 inline-block font-garamond underline">Se boende</span>
+                  <p className="mt-2 font-lato text-sm">{room.description}</p>
+                  <span className="mt-4 inline-block font-garamond underline">
+                    Se boende
+                  </span>
                 </div>
               </Link>
             ))}
