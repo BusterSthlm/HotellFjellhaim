@@ -76,11 +76,11 @@ export default function Foretag() {
           </div>
         </section>
 
-        <section className="grid bg-brown text-cream md:grid-cols-[0.9fr_1.2fr_0.9fr]">
+        <section className="grid h-100 bg-brown text-cream md:grid-cols-[0.9fr_1.2fr_0.9fr]">
           <img
             src={vandring}
             alt="Vandrare på fjället"
-            className="h-72 w-full object-cover md:h-full"
+            className="h-100 w-full object-cover md:h-100"
           />
           <div className="p-8 md:p-12">
             <p className="eyebrow">Mer än bara möten</p>
