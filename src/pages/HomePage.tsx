@@ -11,7 +11,7 @@ export default function HomePage() {
     <>
       {/* Sektion med bakgrundsbild */}
       <div
-        className="relative min-h-[760px] bg-cover bg-center bg-no-repeat pb-8 sm:min-h-[900px]"
+        className="relative min-h-[760px] bg-cover bg-center bg-no-repeat pb-8 sm:min-h-[900px] "
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundPosition: "center",
@@ -72,7 +72,7 @@ export default function HomePage() {
               <img
                 src={dogimage}
                 alt="Fjällheim och den omgivande naturen"
-                className="h-[320px] w-full object-cover sm:h-[420px] md:h-full md:min-h-[500px]"
+                className="h-[320px] w-full object-cover sm:h-[420px] md:h-full md:min-h-[500px] "
               />
             </div>
           </div>
