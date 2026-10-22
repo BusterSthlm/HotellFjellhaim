@@ -19,7 +19,7 @@ export default function HomePage() {
 
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
           <div className="absolute left-0 top-1/3 max-w-3xl px-6 font-garamond text-white sm:px-12">
-            <p className="mb-2 text-2xl">OM FJÄLLHEIM</p>
+            <h2 className="mb-2 text-2xl font-serif">Om fjellheim</h2>
 
             <h1 className="mb-3 text-6xl">
               Mer än ett hotell.
@@ -117,6 +117,11 @@ export default function HomePage() {
                   Bli medlem och få tillgång till fina förmåner, erbjudanden och
                   lite extra fjällkärlek både från Hotell Fjällheim och Hotell
                   Fridhemsgatan i Mora.
+
+                  
+
+Fjällheim är en del av Vindla Hotels. 
+Vill du upptäcka vårt andra hotell är du varmt välkommen till Hotell Fridhemsgatan i Mora.
                 </p>
               </div>
 
