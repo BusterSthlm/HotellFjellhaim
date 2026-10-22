@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { CalendarDays, Users, Minus, Plus } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function HotelCheckIn() {
   const checkinRef = useRef<HTMLInputElement>(null);
@@ -10,18 +11,14 @@ export default function HotelCheckIn() {
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
   const [guestMenuOpen, setGuestMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   function handleSearch() {
-    console.log({
-      checkin,
-      checkout,
-      adults,
-      children,
-    });
+    navigate("/booking");
   }
 
   return (
-    <div className="mx-8 flex w-auto items-stretch gap-4 rounded-xl bg-white p-4 shadow-sm">
+    <div className="mx-4 flex w-auto items-stretch gap-2 rounded-xl bg-[#f3e9d7] p-4 shadow-sm">
       {/* Check-in */}
       <div className="flex flex-1 min-w-0 items-center gap-3">
         <button
@@ -173,7 +170,7 @@ export default function HotelCheckIn() {
             <button
               type="button"
               onClick={() => setGuestMenuOpen(false)}
-              className="mt-2 w-full rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-700"
+              className="mt-2 w-full rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-[#f3e9d7] hover:bg-gray-700"
             >
               Klart
             </button>
@@ -185,7 +182,7 @@ export default function HotelCheckIn() {
       <button
         type="button"
         onClick={handleSearch}
-        className="flex-1 rounded-lg bg-[#3a2516] px-5 py-3 font-lato text-white hover:bg-blue-700"
+        className="flex-1 rounded-lg bg-[#3a2516] px-5 py-3 font-lato text-[#f3e9d7] hover:bg-[#72492C] transition-colors"
       >
         Sök lediga rum
       </button>
