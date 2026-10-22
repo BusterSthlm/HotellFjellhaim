@@ -12,8 +12,8 @@ export default function Featurebar({items}: {items: Feature[] }) {
                         >
                     <Icon size={26} strokeWidth={1.5}/>
                     <div>
-                        <p className="font-serif text-lg">{titel}</p>
-                        <p className="font-serif text-lg">{text}</p>
+                        <h3 className="text-lg">{titel}</h3>
+                        <p className="text-lg">{text}</p>
                     </div>
                 </div>
                     

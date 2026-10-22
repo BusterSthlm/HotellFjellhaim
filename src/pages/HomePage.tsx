@@ -20,16 +20,16 @@ export default function HomePage() {
         <Header overImage />
 
         <main className="relative px-6 pt-32 sm:px-10 sm:pt-40">
-          <p className="pt-20 text-left font-garamond text-[#F3E9D7] sm:pt-28">
+          <p className="pt-20 text-left text-[#F3E9D7] sm:pt-28">
             HOTELL I DALARNA
           </p>
 
-          <p className="text-left font-garamond text-5xl text-[#F3E9D7] sm:text-6xl">
+          <h1 className="text-left text-5xl text-[#F3E9D7] sm:text-6xl">
             En plats att
             <br /> landa på
-          </p>
+          </h1>
 
-          <p className="mb-14 mt-4 text-left font-garamond text-[#F3E9D7] sm:mb-20">
+          <p className="mb-14 mt-4 text-left text-[#F3E9D7] sm:mb-20">
             Natur, avkoppling och äventyr - året runt.
           </p>
 
@@ -44,16 +44,16 @@ export default function HomePage() {
           <div className="flex flex-col items-stretch gap-8 md:flex-row md:items-center md:gap-10">
             {/* Text till vänster */}
             <div className="min-w-0 flex-1">
-              <p className="mb-5 text-left font-garamond text-[#F3E9D7]">
+              <p className="mb-5 text-left text-[#F3E9D7]">
                 VÄLKOMMEN TILL FJÄLLHEIM
               </p>
 
-              <p className="text-left font-garamond text-5xl text-[#F3E9D7]">
+              <h2 className="text-left text-5xl text-[#F3E9D7]">
                 Mer än ett hotell.
                 <br /> En upplevelse
-              </p>
+              </h2>
 
-              <p className="mb-10 mt-6 text-left font-lato text-[#F3E9D7]">
+              <p className="mb-10 mt-6 text-left text-[#F3E9D7]">
                 Fjällheim är en plats där natur, gemenskap och avkoppling möts.
                 Hos oss får du en äkta Dala-upplevelse med komfort,
                 <br /> god mat och minnen som stannar kvar livet ut.
@@ -80,15 +80,15 @@ export default function HomePage() {
         <div className="flex flex-col gap-8 px-2 py-12 md:flex-row md:gap-12">
           {/* Text till vänster */}
           <div className="min-w-0 flex-1">
-            <p className="mt-10 text-left font-garamond text-5xl text-[#3a2516]">
+            <h2 className="mt-10 text-left text-5xl text-[#3a2516]">
               Boende
-            </p>
+            </h2>
 
-            <p className="mt-5 text-left font-lato text-[#3a2516]">
+            <p className="mt-5 text-left text-[#3a2516]">
               Rum för alla tillfällen
             </p>
 
-            <p className="mt-5 text-left font-lato text-[#3a2516]">
+            <p className="mt-5 text-left text-[#3a2516]">
               Oavsett om du kommer för en romantisk helg, en aktiv semester
               eller konferens har vi ett rum som passar dig.
             </p>
@@ -108,7 +108,7 @@ export default function HomePage() {
                 <img src={room.image} alt={room.title} className="h-56 w-full object-cover" />
                 <div className="p-5">
                   <h2 className="text-2xl font-semibold">{room.title}</h2>
-                  <p className="mt-2 font-lato text-sm">{room.description}</p>
+                  <p className="mt-2 text-sm">{room.description}</p>
                   <span className="mt-4 inline-block font-garamond underline">Se boende</span>
                 </div>
               </Link>

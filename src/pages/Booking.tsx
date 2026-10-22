@@ -99,7 +99,7 @@ const [guests, setGuests] = useState(2);
             </div>
 
             <h2 className="mt-6 text-5xl"> Fjällsvit</h2>
-            <p className="mt-1 max-w-md font-serif">Mysigt stort rum</p>
+            <p className="mt-1 max-w-md">Mysigt stort rum</p>
             <ul className="mt-6 grid grid-cols-2 gap-3 text-sm md:grid-cols-3">
               {amenities.map(({ icon: Icon, text }) => (
                 <li key={text} className="flex items-center gap-2">
@@ -157,7 +157,7 @@ const [guests, setGuests] = useState(2);
               </label>
 
               <div className="mt-6 border-t border-forest pt-4">
-                <h3 className="font-sans text-xl font-bold">Tillägg</h3>
+                <h3 className="text-xl font-bold">Tillägg</h3>
 
                 <label className="mt-4 flex cursor-pointer items-start gap-4">
                   <input

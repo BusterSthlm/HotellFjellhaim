@@ -34,7 +34,7 @@ export default function HotelCheckIn() {
         </button>
 
         <div className="flex flex-col items-start">
-          <p className="mb-1 font-garamond text-gray-500">Incheckning</p>
+          <p className="mb-1 text-gray-500">Incheckning</p>
 
           <input
             ref={checkinRef}
@@ -67,7 +67,7 @@ export default function HotelCheckIn() {
         </button>
 
         <div className="flex flex-col items-start">
-          <p className="mb-1 font-garamond text-gray-500">Utcheckning</p>
+          <p className="mb-1 text-gray-500">Utcheckning</p>
 
           <input
             ref={checkoutRef}
@@ -101,12 +101,12 @@ export default function HotelCheckIn() {
         </button>
 
         <div className="flex flex-col items-start">
-          <p className="mb-1 font-garamond text-gray-500">Gäster</p>
+          <p className="mb-1 text-gray-500">Gäster</p>
 
           <button
             type="button"
             onClick={() => setGuestMenuOpen(!guestMenuOpen)}
-            className="text-left text-sm font-garamond text-gray-700"
+            className="text-left text-sm font-lato text-gray-700"
           >
             {adults + children} {adults + children === 1 ? "gäst" : "gäster"}
           </button>

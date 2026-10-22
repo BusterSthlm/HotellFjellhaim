@@ -1,61 +1,160 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/layout/Header";
-import skidor from "../assets/Images/Bilder_aktiveter/skidor.jpg";
-import skog from "../assets/Images/Bilder_aktiveter/Skog.jpg";
-import ren from "../assets/Images/Bilder_aktiveter/ren.jpg";
-import personMedRen from "../assets/Images/Bilder_aktiveter/person-med-ren.jpg";
-import bastu from "../assets/Images/Bilder_bokning/bastu.jpg";
-import landskap from "../assets/Images/Bilder_startsida/bergen.jpg";
-import vandring from "../assets/Images/Bilder_startsida/IMG_7918.jpg";
+import berg from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/Berg.png";
+import berg2 from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/berg2.png";
+import skidor from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/Skidor.png";
+import skoter from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/skoter.png";
+import vandring from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/vandring.png";
+import vinter from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/Vinter.png";
+import cykling from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/cykeltur.png";
+import bastu from "../assets/Images/Bilder_bokning/Bastu2.jpg";
 
+type Season = "vinter" | "sommar";
 type Activity = { image: string; title: string; text: string };
 
-const seasons: Record<"vinter" | "sommar", Activity[]> = {
+const seasonCards: { image: string; title: string; text: string; href: string }[] = [
+  {
+    image: vinter,
+    title: "Att göra vinter",
+    text: "Upptäck längdspår, skidbackar och vinteräventyr i Idres vackra fjällmiljö.",
+    href: "/upplevelse/vinter",
+  },
+  {
+    image: berg,
+    title: "Att göra vår, sommar & höst",
+    text: "Vandra, fiska och cykla – eller koppla av i bastun efter en dag ute i naturen.",
+    href: "/upplevelse/sommar",
+  },
+];
+
+const activities: Record<Season, Activity[]> = {
   vinter: [
-    { image: skidor, title: "Skidåkning", text: "Idre Himmelfjäll är det perfekta skidsystemet för familjen och den som gillar långa och sköna blå och gröna pister." },
-    { image: skog, title: "Längdåkning", text: "Från byn i Idre utgår ett 5- och 10 km-spår samt ett elljusspår på 2 × 2,5 km. Du kan även åka skidor härifrån till Idre fjäll, en sträcka på ca 9 km." },
-    { image: ren, title: "Renvandring", text: "Följ med på en guidad tur bland renarna och lär dig mer om samisk kultur och livet på fjället." },
-    { image: personMedRen, title: "Snöskoter", text: "Skoterled runt hörnet – parkera gratis på hotellets parkering. Idre med omnejd erbjuder 160 mil skoterleder i naturskön och varierad miljö." },
+    {
+      image: vinter,
+      title: "Längdskidor",
+      text: "Snöra på dig skidorna och följ spåren genom skog och fjäll. Här finns fina möjligheter till både kortare turer och längre utflykter.",
+    },
+    {
+      image: skidor,
+      title: "Utförsåkning",
+      text: "Njut av fartfyllda åk och härlig fjälluft i Idres skidbackar, med nedfarter för både nybörjare och vana skidåkare.",
+    },
+    {
+      image: skoter,
+      title: "Vinteräventyr",
+      text: "Ge dig ut på skoter och upplev det snötäckta fjällandskapet från nya vyer.",
+    },
+    {
+      image: vandring,
+      title: "Upptäck Idre på några dagar",
+      text: "Kombinera dagar ute i vinterlandskapet med god mat och sköna stunder på hotellet.",
+    },
+    {
+      image: berg2,
+      title: "Upplev Idre under 7 dagar",
+      text: "Ta gott om tid att upptäcka fjällen och variera semestern med skidåkning och andra vinteraktiviteter.",
+    },
   ],
   sommar: [
-    { image: vandring, title: "Vandring", text: "Märkta leder för alla nivåer, från korta promenader till heldagsturer upp på kalfjället." },
-    { image: landskap, title: "Fiske", text: "Öring i Grövelsjön, röding i Burusjön eller harr i Storån. Köp fiskekort och njut av din fisketur." },
-    { image: bastu, title: "Bastu", text: "Avsluta dagen i vår bastu – boka den för dig själv eller tillsammans med sällskap." },
-    { image: skog, title: "Cykling", text: "Stigar och grusvägar genom skog och fjäll. Perfekt för både lugna turer och utmanande pass." },
+    {
+      image: vandring,
+      title: "Vandring",
+      text: "Följ leder genom skog och fjäll, från lugna promenader till längre turer med storslagna vyer.",
+    },
+    {
+      image: berg,
+      title: "Fiske",
+      text: "Upplev lugnet vid vattnet och prova fiskelyckan i Idres sjöar och vattendrag. Kom ihåg att kontrollera lokala fiskeregler och fiskekort.",
+    },
+    {
+      image: bastu,
+      title: "Bastu",
+      text: "Varva ner och låt dagens äventyr sjunka in med en stunds avkoppling i bastun.",
+    },
+    {
+      image: cykling,
+      title: "Cykling",
+      text: "Upptäck omgivningarna på cykel längs stigar och vägar genom den vackra fjällnaturen.",
+    },
   ],
 };
 
-export default function Upplevelser() {
-  const [season, setSeason] = useState<"vinter" | "sommar">("vinter");
+export default function Experience() {
+  return (
+    <>
+      <Header />
+      <main className="container-page py-10 pt-28">
+        <h1 className="text-4xl">Upplev Idre</h1>
+
+        <div className="mt-10 grid gap-8 md:grid-cols-2">
+          {seasonCards.map((card) => (
+            <Link
+              key={card.href}
+              to={card.href}
+              className="group overflow-hidden rounded-lg bg-white shadow-md transition hover:-translate-y-1 hover:shadow-lg"
+            >
+              <img
+                src={card.image}
+                alt=""
+                className="h-64 w-full object-cover md:h-80"
+              />
+              <div className="p-6">
+                <h2 className="text-3xl font-semibold">{card.title}</h2>
+                <p className="mt-3">{card.text}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </main>
+    </>
+  );
+}
+
+export function ExperienceSeason({ season }: { season: Season }) {
+  const isWinter = season === "vinter";
 
   return (
     <>
       <Header />
       <main className="container-page py-10 pt-28">
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <h1 className="text-4xl">Att göra {season === "vinter" ? "vinter" : "vår, sommar & höst"}</h1>
-          <div className="flex rounded-md border border-brown">
-            {(["vinter", "sommar"] as const).map((s) => (
-              <button
-                key={s}
-                type="button"
-                aria-pressed={season === s}
-                onClick={() => setSeason(s)}
-                className={`px-5 py-2 font-serif text-lg capitalize ${season === s ? "bg-brown text-cream" : "text-brown"}`}
+          <h1 className="text-4xl">
+            {isWinter ? "Att göra vinter" : "Att göra vår, sommar & höst"}
+          </h1>
+
+          <nav
+            aria-label="Välj säsong"
+            className="flex rounded-md border border-brown"
+          >
+            {(["vinter", "sommar"] as const).map((option) => (
+              <Link
+                key={option}
+                to={`/upplevelse/${option}`}
+                aria-current={season === option ? "page" : undefined}
+                className={`px-5 py-2 font-serif text-lg capitalize ${
+                  season === option ? "bg-brown text-cream" : "text-brown"
+                }`}
               >
-                {s}
-              </button>
+                {option}
+              </Link>
             ))}
-          </div>
+          </nav>
         </div>
 
-        <div className="mt-10 grid gap-8 md:grid-cols-2">
-          {seasons[season].map((a) => (
-            <article key={a.title} className="overflow-hidden rounded-lg bg-white shadow-md">
-              <img src={a.image} alt={a.title} className="h-64 w-full object-cover md:h-80" />
+        <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {activities[season].map((activity) => (
+            <article
+              key={activity.title}
+              className="overflow-hidden rounded-lg bg-white shadow-md"
+            >
+              <img
+                src={activity.image}
+                alt={activity.title}
+                className="h-64 w-full object-cover md:h-80"
+              />
               <div className="p-6">
-                <h2 className="text-3xl font-semibold">{a.title}</h2>
-                <p className="mt-3">{a.text}</p>
+                <h2 className="text-3xl font-semibold">{activity.title}</h2>
+                <p className="mt-3">{activity.text}</p>
               </div>
             </article>
           ))}

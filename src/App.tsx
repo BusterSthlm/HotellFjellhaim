@@ -5,7 +5,7 @@ import Activities from "./pages/Activites";
 import About from "./pages/About";
 import Booking from "./pages/Booking";
 import Company from "./pages/Company";
-import Experience from "./pages/Experience";
+import Experience, { ExperienceSeason } from "./pages/Experience";
 import Resturant from "./pages/Resturant";
 import Contact from "./pages/Contact";
 
@@ -20,6 +20,15 @@ function App() {
           <Route path="/booking" element={<Booking />} />
           <Route path="/company" element={<Company />} />
           <Route path="/experience" element={<Experience />} />
+          <Route path="/upplevelse" element={<Experience />} />
+          <Route
+            path="/upplevelse/vinter"
+            element={<ExperienceSeason season="vinter" />}
+          />
+          <Route
+            path="/upplevelse/sommar"
+            element={<ExperienceSeason season="sommar" />}
+          />
           <Route path="/restaurant" element={<Resturant />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
