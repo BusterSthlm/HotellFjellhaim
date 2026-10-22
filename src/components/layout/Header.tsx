@@ -32,7 +32,7 @@ function Header({ overImage = false }: HeaderProps) {
           <img
             src={isTransparent ? lightLogo : logo}
             alt="Logotyp"
-            className="block h-14 w-auto object-contain sm:h-[75px] "
+            className="block h-14 w-auto object-contain sm:h-[75px] color-secondary"
           />
         </Link>
 
@@ -42,37 +42,37 @@ function Header({ overImage = false }: HeaderProps) {
         >
           <a
             href="/booking"
-            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-white" : "text-[#72492C]"}`}
+            className={`font-garamond text-xl font-bold active:text-bold hover:underline ${isTransparent ? "text-[#3a2516]" : "text-[#72492C]"}`}
           >
             Boka
           </a>
           <a
             href="/company"
-            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-white" : "text-[#72492C]"}`}
+            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-[#3a2516]" : "text-[#72492C]"}`}
           >
             Företag
           </a>
           <a
             href="/experience"
-            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-white" : "text-[#72492C]"}`}
+            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-[#3a2516]" : "text-[#72492C]"}`}
           >
             Upplevelser
           </a>
           <a
             href="/restaurant"
-            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-white" : "text-[#72492C]"}`}
+            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-[#3a2516]" : "text-[#72492C]"}`}
           >
             Restaurang
           </a>
           <a
             href="/about"
-            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-white" : "text-[#72492C]"}`}
+            className={`font-garamond text-xl text-primary font-bold hover:underline ${isTransparent ? "text-[#3a2516]" : "text-[#72492C]"}`}
           >
             Om
           </a>
           <a
             href="/contact"
-            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-white" : "text-[#72492C]"}`}
+            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-[#3a2516]" : "text-[#72492C]"}`}
           >
             Kontakt
           </a>

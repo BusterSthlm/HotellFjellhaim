@@ -52,11 +52,11 @@ export default function MatOchDryck() {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
           <div className="container-page relative">
-            <p className={label}>Mat och dryck</p>
+            <h3 className={label}>Mat och dryck</h3>
             <h2 className="text-5xl leading-tight text-white md:text-6xl ">
               Smaker som hör hemma här
             </h2>
-            <p className="mt-4 max-w-xl text-lg text-white">
+            <p className="mt-4 max-w-xl text-m text-white">
               Lokala råvaror och säsongsinspirerade måltider som gör varje
               måltid lite speciell.
             </p>
@@ -80,7 +80,7 @@ export default function MatOchDryck() {
           />
           <div className="bg-[#3f4a35] px-6 py-12 text-[#f3e9d7] md:px-12">
             <h2 className="text-[#f3e9d7] font-serif ">Frukost</h2> 
-            <p className="text-[#f3e9d7]">
+            <p className="text-[#f3e9d7] font-lato font-light">
               Det ska vara bekvämt och kännas lyxigt att bo på hotell och
               frukost är bästa starten på dagen. På vår omtyckta frukostbuffé
               hittar du bland annat hembakad lingonlimpa, croassanter, olika
@@ -89,8 +89,7 @@ export default function MatOchDryck() {
               gott kaffe. Våfflor gräddar du själv och toppar med det du önskar,
               exempel sylt och grädde eller nutella. 
             </p><br />
-            <p>Välkommen på frukost även
-              om du inte bor hos oss, 185 kr /person</p>
+            <p>Välkommen på frukost även om du inte bor hos oss, 185 kr /person</p>
 
            
 

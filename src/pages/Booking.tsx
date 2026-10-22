@@ -207,7 +207,7 @@ const [guests, setGuests] = useState(2);
 
               <button type="submit"
               disabled={nights < 1}
-              className="group mt-8 flex w-full items-center justify-center gap-3 rounded-xl bg-green px-6 py-5 font-semibold text-secondary shadow-md transition-all duration-200 hover:-translate-y-1 disabled:cursor-not-allowed disabled:opacity-50">
+              className="group mt-8 flex w-full items-center justify-center gap-3 rounded-xl bg-green px-6 py-5 font-semibold text-secondary shadow-md transition-all duration-200  disabled:cursor-not-allowed disabled:opacity-50">
                 Boka {kr(total)}
                 </button>
 
