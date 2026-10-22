@@ -44,9 +44,9 @@ export default function HomePage() {
           <div className="flex flex-col gap-8 md:flex-row md:items-stretch md:gap-10">
             {/* Text till vänster */}
             <div className="min-w-0 flex-1">
-              <p className="mb-5 text-left text-[#F3E9D7]">
+              <h3 className="mt-10  text-left text-serif text-[#F3E9D7]">
                 VÄLKOMMEN TILL FJÄLLHEIM
-              </p>
+              </h3>
 
               <h2 className="text-left text-5xl text-[#F3E9D7]">
                 Mer än ett hotell.
@@ -80,15 +80,15 @@ export default function HomePage() {
         <div className="flex flex-col gap-8 px-2 py-12 md:flex-row md:gap-12">
           {/* Text till vänster */}
           <div className="min-w-0 flex-1">
-            <h2 className="mt-10 text-left text-5xl text-[#3a2516]">
+            <h2 className="ml-10 text-left text-5xl text-[#3a2516]">
               Boende
             </h2>
 
-            <p className="mt-5 text-left text-[#3a2516]">
+            <p className="mt-5 ml-10 text-left text-[#3a2516]">
               Rum för alla tillfällen
             </p>
 
-            <p className="mt-5 text-left text-[#3a2516]">
+            <p className="mt-5 ml-10 text-left text-[#3a2516]">
               Oavsett om du kommer för en romantisk helg, en aktiv semester
               eller konferens har vi ett rum som passar dig.
             </p>

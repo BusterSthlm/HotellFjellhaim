@@ -53,7 +53,7 @@ export default function MatOchDryck() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
           <div className="container-page relative">
             <p className={label}>Mat och dryck</p>
-            <h2 className="text-5xl leading-tight text-[#f3e9d7] md:text-7xl ">
+            <h2 className="text-5xl leading-tight text-[#f3e9d7] md:text-6xl ">
               Smaker som hör hemma här
             </h2>
             <p className="mt-4 max-w-xl text-lg text-[#f3e9d7]">

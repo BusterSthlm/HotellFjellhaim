@@ -21,7 +21,7 @@ export default function HomePage() {
           <div className="absolute left-0 top-1/3 max-w-3xl px-6 font-garamond text-white sm:px-12">
             <p className="mb-2 text-2xl">OM FJÄLLHEIM</p>
 
-            <h1 className="mb-3 text-4xl">
+            <h1 className="mb-3 text-6xl">
               Mer än ett hotell.
               <br />
               En plats att landa på.
