@@ -1,5 +1,5 @@
 
-import { ArrowLeft, BedDouble, User, Wifi, Bath, Mountain, ParkingCircle, Lock, CheckCircle2} from "lucide-react";
+import {  BedDouble, User, Wifi, Bath, Mountain, ParkingCircle, Lock, CheckCircle2} from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/layout/Header";
