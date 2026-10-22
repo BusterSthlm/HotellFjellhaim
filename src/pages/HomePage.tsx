@@ -19,7 +19,7 @@ export default function HomePage() {
       >
         <Header overImage />
 
-        <main className="relative px-6 pt-72 sm:px-10 sm:pt-80">
+        <main className="relative px-6 pt-88 sm:px-10 sm:pt-96">
           <p className="pt-20 text-left font-garamond text-[#F3E9D7] sm:pt-28">
             HOTELL I DALARNA
           </p>
