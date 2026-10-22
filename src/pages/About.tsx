@@ -21,13 +21,13 @@ export default function HomePage() {
           <div className="absolute left-0 top-1/3 max-w-3xl px-6 font-garamond text-white sm:px-12">
             <p className="mb-2 text-2xl">OM FJÄLLHEIM</p>
 
-            <p className="mb-3 text-4xl">
+            <h1 className="mb-3 text-4xl">
               Mer än ett hotell.
               <br />
               En plats att landa på.
-            </p>
+            </h1>
 
-            <p className="max-w-xl font-lato text-lg">
+            <p className="max-w-xl text-lg">
               Genom Dalarnas natur erbjuder vi en unik kombination av boende,
               mat, upplevelser och möten året runt.
             </p>
@@ -38,9 +38,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 items-stretch">
             {/* Text till vänster */}
             <div className="px-12 py-24">
-              <p className="text-4xl font-garamond">Där allt en gång började</p>
+              <h2 className="text-4xl">Där allt en gång började</h2>
 
-              <p className="text-lg font-lato leading-relaxed mt-5">
+              <p className="text-lg leading-relaxed mt-5">
                 Långt innan Fjällheim blev hotell var byggnaden ett skolhem för
                 barn från Idre och de omkringliggande byarna. Avstånden var
                 långa och skolskjuts fanns inte, så barn som bodde långt bort
@@ -83,11 +83,11 @@ export default function HomePage() {
 
             {/* Text till höger */}
             <div className="px-12 py-24 text-[#3a2516]">
-              <p className="text-4xl font-garamond">
+              <h2 className="text-4xl">
                 Här fortsätter berättelsen
-              </p>
+              </h2>
 
-              <p className="text-lg font-lato mt-5 leading-relaxed">
+              <p className="text-lg mt-5 leading-relaxed">
                 I februari 2026 började ett nytt kapitel i Fjällheims historia
                 när vi i familjen Nielsen tog över det stora röda huset mitt i
                 Idre. Vi föll för husets historia och möjligheten att skapa den
@@ -111,9 +111,9 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 items-stretch">
               {/* Text till vänster */}
               <div className="px-12 py-24 text-[#3a2516]">
-                <p className="text-4xl font-garamond mb-3">Fjällheim Friends</p>
+                <h2 className="mb-3 text-4xl">Fjällheim Friends</h2>
 
-                <p className="text-lg font-lato leading-relaxed">
+                <p className="text-lg leading-relaxed">
                   Bli medlem och få tillgång till fina förmåner, erbjudanden och
                   lite extra fjällkärlek både från Hotell Fjällheim och Hotell
                   Fridhemsgatan i Mora.
