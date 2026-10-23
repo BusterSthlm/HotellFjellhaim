@@ -10,7 +10,7 @@
   --color-brown: #3a2516;
   --color-secondary: #f7eedf; /*bakgrundsfärg*/
   --color-cream: #f3e9d7;
-  --color-tertiary: #72492c; /*ren*/
+  --color-tertiary: #68452d; /*ren*/
   --color-ink: #2b2118;
   --color-forest: #415531;
   --color-berry: #9b3d3d;
@@ -74,7 +74,7 @@ h6 {
 
 p {
   font-family: var(--sans);
-  font-weight:400;
+  font-weight: 400;
   font-size: 16px;
 }
 

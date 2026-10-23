@@ -19,7 +19,7 @@ const LINKS: FooterLink[] = [
 
 export default function Footer() {
   return (
-    <footer className="bg-primary py-10 text-[#F3E9D7]">
+    <footer className="bg-[#68452d] py-10 text-[#F3E9D7]">
       <div className="container mx-auto px-6">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:gap- lg:gap-56">
           {/* Logotyp och fjällbild till vänster */}
