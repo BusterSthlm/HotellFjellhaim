@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Header from "../components/layout/Header";
+import { ArrowLeft } from "lucide-react";
 import berg from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/Berg.png";
 import berg2 from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/berg2.png";
 import skidor from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/Skidor.png";
