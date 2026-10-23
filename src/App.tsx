@@ -7,7 +7,7 @@ import Booking from "./pages/Booking";
 import Company from "./pages/Company";
 import Experience, { ExperienceSeason } from "./pages/Experience";
 import Resturant from "./pages/Resturant";
-import Contact from "./pages/Contact";
+
 
 function App() {
   return (
