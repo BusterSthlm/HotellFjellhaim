@@ -44,13 +44,13 @@ function Header({ overImage = false }: HeaderProps) {
             href="/booking"
             className={`font-garamond text-xl font-bold active:text-bold hover:underline ${isTransparent ? "text-[#68452d]" : "text-[#68452d]"}`}
           >
-            Boka
+            Våra Rum
           </a>
           <a
             href="/company"
             className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-[#68452d]" : "text-[#68452d]"}`}
           >
-            Företag
+            Konferens
           </a>
           <a
             href="/experience"
@@ -69,12 +69,6 @@ function Header({ overImage = false }: HeaderProps) {
             className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-[#68452d]" : "text-[#68452d]"}`}
           >
             Om
-          </a>
-          <a
-            href="/contact"
-            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-[#68452d]" : "text-[#68452d]"}`}
-          >
-            Kontakt
           </a>
         </nav>
 
@@ -107,7 +101,6 @@ function Header({ overImage = false }: HeaderProps) {
             ["Upplevelser", "/experience"],
             ["Restaurang", "/restaurant"],
             ["Om", "/about"],
-            ["Kontakt", "/contact"],
           ].map(([label, href]) => (
             <Link
               key={href}

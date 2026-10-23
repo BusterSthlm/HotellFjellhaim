@@ -12,7 +12,7 @@ type FeatureBarProps = {
 
 export default function FeatureBar({ items }: FeatureBarProps) {
   return (
-    <section className="bg-[#F3E9D7]">
+    <section className="bg-white">
       <div className="container-page grid grid-cols-2 gap-y-6 py-6 md:grid-cols-4">
         {items.map(({ icon: Icon, titel, text }, index) => (
           <div

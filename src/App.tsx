@@ -8,7 +8,6 @@ import Company from "./pages/Company";
 import Experience, { ExperienceSeason } from "./pages/Experience";
 import Resturant from "./pages/Resturant";
 
-
 function App() {
   return (
     <Router>
@@ -30,7 +29,6 @@ function App() {
             element={<ExperienceSeason season="sommar" />}
           />
           <Route path="/restaurant" element={<Resturant />} />
-         
         </Routes>
       </main>
       <Footer />
