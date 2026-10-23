@@ -182,7 +182,7 @@ export default function HotelCheckIn() {
       <button
         type="button"
         onClick={handleSearch}
-        className="flex-1 rounded-lg bg-[#3a2516] px-5 py-3 font-lato text-[#f3e9d7] hover:bg-[#72492C] transition-colors"
+        className="flex-1 rounded-lg bg-[#68452d] px-5 py-3 font-lato text-[#f3e9d7] hover:bg-[#3a2516] transition-colors"
       >
         Sök lediga rum
       </button>

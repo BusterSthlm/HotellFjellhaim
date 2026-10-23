@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/grafisk-material/Illustrations/logo/logotyp_fjällheim_primär.svg";
-import lightLogo from "../../assets/grafisk-material/Illustrations/logo/logotyp_fjällheim_vit.svg";
+import logo from "../../assets/grafisk-material/Illustrations/logo/logotyp_fjällheim_primär_rgb.svg";
+import lightLogo from "../../assets/grafisk-material/Illustrations/logo/logotyp_2.svg";
 
 type HeaderProps = { overImage?: boolean };
 
@@ -42,37 +42,37 @@ function Header({ overImage = false }: HeaderProps) {
         >
           <a
             href="/booking"
-            className={`font-garamond text-xl font-bold active:text-bold hover:underline ${isTransparent ? "text-[#3a2516]" : "text-[#72492C]"}`}
+            className={`font-garamond text-xl font-bold active:text-bold hover:underline ${isTransparent ? "text-[#68452d]" : "text-[#68452d]"}`}
           >
             Boka
           </a>
           <a
             href="/company"
-            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-[#3a2516]" : "text-[#72492C]"}`}
+            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-[#68452d]" : "text-[#68452d]"}`}
           >
             Företag
           </a>
           <a
             href="/experience"
-            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-[#3a2516]" : "text-[#72492C]"}`}
+            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-[#68452d]" : "text-[#68452d]"}`}
           >
             Upplevelser
           </a>
           <a
             href="/restaurant"
-            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-[#3a2516]" : "text-[#72492C]"}`}
+            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-[#68452d]" : "text-[#68452d]"}`}
           >
             Restaurang
           </a>
           <a
             href="/about"
-            className={`font-garamond text-xl text-primary font-bold hover:underline ${isTransparent ? "text-[#3a2516]" : "text-[#72492C]"}`}
+            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-[#68452d]" : "text-[#68452d]"}`}
           >
             Om
           </a>
           <a
             href="/contact"
-            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-[#3a2516]" : "text-[#72492C]"}`}
+            className={`font-garamond text-xl font-bold hover:underline ${isTransparent ? "text-[#68452d]" : "text-[#68452d]"}`}
           >
             Kontakt
           </a>
@@ -81,13 +81,13 @@ function Header({ overImage = false }: HeaderProps) {
         {/* Knapp till höger */}
         <Link
           to="/booking"
-          className="hidden shrink-0 rounded-lg bg-[#3a2516] px-6 py-3 font-lato text-white transition hover:bg-[#5A3923] sm:inline-block"
+          className="hidden shrink-0 rounded-lg bg-[#68452d] px-6 py-3 font-lato text-white transition hover:bg-[#3a2516] sm:inline-block"
         >
-          Boka nu
+          Boka rum
         </Link>
         <button
           type="button"
-          className={`rounded-lg border px-3 py-2 font-lato lg:hidden ${isTransparent ? "border-white text-#f3e9d7" : "border-[#72492C] text-[#72492C]"}`}
+          className={`rounded-lg border px-3 py-2 font-lato lg:hidden ${isTransparent ? "border-white text-#f3e9d7" : "border-[#68452d] text-[#72492C]"}`}
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
           onClick={() => setMenuOpen((open) => !open)}

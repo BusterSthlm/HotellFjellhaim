@@ -11,7 +11,7 @@ export default function HomePage() {
     <>
       {/* Sektion med bakgrundsbild */}
       <div
-        className="relative min-h-[760px] bg-cover bg-center bg-no-repeat pb-8 sm:min-h-[900px] "
+        className="relative min-h-[760px] bg-110% bg-center bg-no-repeat pb-8 sm:min-h-[900px] "
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundPosition: "center",
@@ -39,7 +39,7 @@ export default function HomePage() {
       {/* Beige sektion under bilden */}
       <section className="w-full bg-[#F3E9D7] py-8">
         {/* Brun ruta */}
-        <div className="min-h-[500px] w-full bg-[#3a2516] pl-6 pr-0 sm:pl-10">
+        <div className="min-h-[500px] w-full bg-[#68452d] pl-6 pr-0 sm:pl-10">
           <div className="flex flex-col gap-8 md:flex-row md:items-stretch md:gap-10">
             {/* Text till vänster */}
             <div className="min-w-0 flex-1">
@@ -67,11 +67,11 @@ export default function HomePage() {
             </div>
 
             {/* Bild till höger */}
-            <div className="min-w-0 flex-1 md:self-stretch">
+            <div className="min-w-0 flex-1 py-6 md:self-stretch">
               <img
                 src={dogimage}
                 alt="Fjällheim och den omgivande naturen"
-                className="h-[320px] w-full object-cover sm:h-[420px] md:h-full md:min-h-[500px] "
+                className="h-[320px] w-full rounded-l-xl object-cover sm:h-[420px] md:h-[450px]"
               />
             </div>
           </div>
