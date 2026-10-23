@@ -11,6 +11,8 @@ import cykling from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/cykeltu
 import bastu from "../assets/Images/Bilder_bokning/Bastu2.jpg";
 import skoghoger from "../assets/grafisk-material/Illustrations/Skog/Skog_hoger.svg";
 import skogvanster from "../assets/grafisk-material/Illustrations/Skog/Skog_vanster.svg";
+import PageHero from "../components/layout/PageHero";
+import headerimage from "../assets/Images/Bilder_startsida/IMG_7813.jpg";
 
 import paket1 from "../assets/Images/Bilder_paket/paket1.png";
 import paket2 from "../assets/Images/Bilder_paket/paket2.png";
@@ -112,12 +114,19 @@ const activities: Record<Season, Activity[]> = {
 export default function Experience() {
   return (
     <>
-      <div className="min-h-screen bg-[#F3E9D7]">
-        <Header />
-        <main className="container-page py-10 pt-28">
-          <h1 className="text-4xl">Upplev Idre</h1>
+      <Header overImage />
 
-          <div className="mt-10 grid gap-8 md:grid-cols-2">
+      <PageHero
+        image={headerimage}
+        eyebrow="Upplevelserna på Fjällheim"
+        title="Mer än ett hotell. En hel destination."
+        text=""
+      />
+
+      <div className="min-h-screen bg-[#F3E9D7]">
+        <main className="container-page py-10">
+          {/* Säsongskort */}
+          <div className="grid gap-8 md:grid-cols-2">
             {seasonCards.map((card) => (
               <Link
                 key={card.href}
@@ -137,6 +146,7 @@ export default function Experience() {
             ))}
           </div>
 
+          {/* Paket */}
           <div className="mt-20">
             <h2 className="text-center font-serif text-4xl font-semibold">
               Paket
@@ -166,17 +176,18 @@ export default function Experience() {
           </div>
         </main>
       </div>
-      <section className="relative h-72 bg-[#F3E9D7] md:h-80">
+
+      <section className="relative h-72 overflow-hidden bg-[#F3E9D7] md:h-80">
         <img
           src={skogvanster}
           alt=""
-          className="absolute bottom-0 left-6 h-64 w-auto max-w-[40%] md:left-10"
+          className="absolute bottom-0 left-6 h-64 w-auto max-w-[40%] object-contain md:left-10"
         />
 
         <img
           src={skoghoger}
           alt=""
-          className="absolute bottom-0 right-6 h-64 w-auto max-w-[40%] md:right-10"
+          className="absolute bottom-0 right-6 h-64 w-auto max-w-[40%] object-contain md:right-10"
         />
       </section>
     </>

@@ -15,7 +15,7 @@
   --color-forest: #415531;
   --color-berry: #9b3d3d;
   --color-red: #f4f3ec; /*Dalaröd*/
-  --color-green: #415531; /*Skog*/
+  --color-green: #3a5232; /*Skog*/
   --color-beige: #f3e9d7; /*Näver*/
 
   --text: #331f11; /*All text i mörkbrunt*/
@@ -73,7 +73,6 @@ h6 {
 }
 
 p {
-  font-family: var(--sans);
   font-weight: 400;
   font-size: 16px;
 }

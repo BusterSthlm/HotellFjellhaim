@@ -3,44 +3,33 @@ import aboutBild from "../assets/Images/Bilder_om/IMG_7813.jpg";
 import svartvitBild from "../assets/Images/Bilder_om/fjällheim_svartvit.png";
 import personBild from "../assets/Images/Bilder_om/IMG_8032.jpg";
 import renBild from "../assets/Images/Bilder_om/ren.jpg";
+import PageHero from "../components/layout/PageHero";
+import skoghoger from "../assets/grafisk-material/Illustrations/Skog/Skog_hoger.svg";
+import skogvanster from "../assets/grafisk-material/Illustrations/Skog/Skog_vanster.svg";
+
+const IMG = {
+  hero: aboutBild,
+};
 
 export default function HomePage() {
   return (
     <>
       <Header overImage />
-
-      <main className="w-full bg-secondary">
-        <div className="relative w-full">
-          <img
-            src={aboutBild}
-            alt="Fjällbild"
-            className="h-[500px] w-full object-cover object-[center_30%]"
-          />
-
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
-          <div className="absolute left-0 top-1/3 max-w-3xl px-6 font-garamond text-white sm:px-12">
-            <h2 className="mb-2 text-2xl font-serif">Om fjellheim</h2>
-
-            <h1 className="mb-3 text-6xl">
-              Mer än ett hotell.
-              <br />
-              En plats att landa på.
-            </h1>
-
-            <p className="max-w-xl text-lg">
-              Genom Dalarnas natur erbjuder vi en unik kombination av boende,
-              mat, upplevelser och möten året runt.
-            </p>
-          </div>
-        </div>
+      <main className="bg-[#F3E9D7] text-[#f3e9d7]">
+        <PageHero
+          image={IMG.hero}
+          eyebrow="Om Fjällheim"
+          title="Mer än ett hotell. En plats att landa på."
+          text=""
+        />
         {/* Brun ruta under bilden */}
-        <div className="w-full bg-[#3a2516] text-white mt-8">
+        <div className="w-full bg-[#3a2516] text-[#f3e9d7] mt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 items-stretch">
             {/* Text till vänster */}
             <div className="px-12 py-24">
-              <h2 className="text-4xl">Där allt en gång började</h2>
+              <h2 className="text-4xl font-bold">Där allt en gång började</h2>
 
-              <p className="text-lg leading-relaxed mt-5">
+              <p className="text-lg leading-relaxed mt-5 font-lato">
                 Långt innan Fjällheim blev hotell var byggnaden ett skolhem för
                 barn från Idre och de omkringliggande byarna. Avstånden var
                 långa och skolskjuts fanns inte, så barn som bodde långt bort
@@ -60,11 +49,11 @@ export default function HomePage() {
             </div>
 
             {/* Bild till höger */}
-            <div className="min-h-[350px]">
+            <div className="min-h-[350px] py-4">
               <img
                 src={svartvitBild}
                 alt="Hotell Fjällheim"
-                className="w-full h-full min-h-[350px] object-cover"
+                className="h-full min-h-[350px] w-full rounded-l-2xl object-cover"
               />
             </div>
           </div>
@@ -73,21 +62,19 @@ export default function HomePage() {
         <div className="w-full bg-[#f3e9d7] mt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 items-stretch">
             {/* Bild till vänster */}
-            <div className="min-h-[350px]">
+            <div className="min-h-[350px] py-4">
               <img
                 src={personBild}
-                alt="Person på Fjällheim"
-                className="w-full h-full min-h-[350px] object-cover"
+                alt="Hotell Fjällheims ägare"
+                className="h-full min-h-[350px] w-full rounded-r-2xl object-cover"
               />
             </div>
 
             {/* Text till höger */}
-            <div className="px-12 py-24 text-[#3a2516]">
-              <h2 className="text-4xl">
-                Här fortsätter berättelsen
-              </h2>
+            <div className="px-12 py-24 text-[#331f11]">
+              <h2 className="text-4xl font-bold">Här fortsätter berättelsen</h2>
 
-              <p className="text-lg mt-5 leading-relaxed">
+              <p className="text-lg mt-5 leading-relaxed font-lato">
                 I februari 2026 började ett nytt kapitel i Fjällheims historia
                 när vi i familjen Nielsen tog över det stora röda huset mitt i
                 Idre. Vi föll för husets historia och möjligheten att skapa den
@@ -110,33 +97,45 @@ export default function HomePage() {
           <div className="w-full bg-[#f3e9d7] mt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 items-stretch">
               {/* Text till vänster */}
-              <div className="px-12 py-24 text-[#3a2516]">
-                <h2 className="mb-3 text-4xl">Fjällheim Friends</h2>
+              <div className="px-12 py-24 text-[#331f11]">
+                <h2 className="mb-3 text-4xl font-bold">Fjällheim Friends</h2>
 
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg font-lato leading-relaxed text-[#331f11]">
                   Bli medlem och få tillgång till fina förmåner, erbjudanden och
                   lite extra fjällkärlek både från Hotell Fjällheim och Hotell
-                  Fridhemsgatan i Mora.
-
-                  
-
-Fjällheim är en del av Vindla Hotels. 
-Vill du upptäcka vårt andra hotell är du varmt välkommen till Hotell Fridhemsgatan i Mora.
+                  Fridhemsgatan i Mora. Fjällheim är en del av Vindla Hotels.
+                  Vill du upptäcka vårt andra hotell är du varmt välkommen till
+                  Hotell Fridhemsgatan i Mora.
                 </p>
               </div>
 
               {/* Bild till höger */}
-              <div className="min-h-[350px]">
+              <div className="min-h-[350px] py-4">
                 <img
                   src={renBild}
                   alt="Ren på fjället"
-                  className="w-full h-full min-h-[350px] object-cover object-[center_35%]"
+                  className="h-full min-h-[350px] w-full rounded-l-2xl object-cover"
                 />
               </div>
             </div>
           </div>
         </div>
       </main>
+      <section className="relative h-72 overflow-hidden bg-[#F3E9D7] md:h-80">
+        <img
+          src={skogvanster}
+          alt=""
+          aria-hidden="true"
+          className="absolute bottom-0 left-6 h-64 w-auto max-w-[40%] object-contain md:left-10"
+        />
+
+        <img
+          src={skoghoger}
+          alt=""
+          aria-hidden="true"
+          className="absolute bottom-0 right-6 h-64 w-auto max-w-[40%] object-contain md:right-10"
+        />
+      </section>
     </>
   );
 }
