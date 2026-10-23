@@ -7,7 +7,6 @@ import Booking from "./pages/Booking";
 import Company from "./pages/Company";
 import Experience, { ExperienceSeason } from "./pages/Experience";
 import Resturant from "./pages/Resturant";
-import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -30,7 +29,6 @@ function App() {
             element={<ExperienceSeason season="sommar" />}
           />
           <Route path="/restaurant" element={<Resturant />} />
-          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
       <Footer />

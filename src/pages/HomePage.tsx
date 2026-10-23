@@ -5,16 +5,19 @@ import HotelCheckIn from "../components/ui/HotelCheckIn";
 import dogimage from "../assets/Images/Bilder_startsida/IMG_7800.jpg";
 import roomImage from "../assets/Images/Bilder_bokning/rum1.jpg";
 import suiteImage from "../assets/Images/Bilder_bokning/Rum_vit.jpg";
+import skoghoger from "../assets/grafisk-material/Illustrations/Skog/Skog_hoger.svg";
+import skogvanster from "../assets/grafisk-material/Illustrations/Skog/Skog_vanster.svg";
 
 export default function HomePage() {
   return (
     <>
       {/* Sektion med bakgrundsbild */}
       <div
-        className="relative min-h-[760px] bg-110% bg-center bg-no-repeat pb-8 sm:min-h-[900px] "
+        className="relative min-h-[760px] bg-center bg-no-repeat pb-8 sm:min-h-[900px] "
         style={{
           backgroundImage: `url(${backgroundImage})`,
-          backgroundPosition: "center",
+          backgroundPosition: "center 20%",
+          backgroundSize: "140%",
         }}
       >
         <Header overImage />
@@ -44,7 +47,7 @@ export default function HomePage() {
             {/* Text till vänster */}
             <div className="min-w-0 flex-1">
               <h3 className="mt-10  text-left text-serif text-secondary">
-                Hotell i Dalarna
+                Välkommen till Fjällheim
               </h3>
 
               <h2 className="text-left text-5xl text-[#F3E9D7]">
@@ -54,8 +57,8 @@ export default function HomePage() {
 
               <p className="mb-10 mt-6 text-left text-[#F3E9D7]">
                 Fjällheim är en plats där natur, gemenskap och avkoppling möts.
-                Hos oss får du en äkta Dala-upplevelse med komfort,
-                <br /> god mat och minnen som stannar kvar livet ut.
+                Hos oss får du en äkta Dala-upplevelse med komfort, god mat och
+                minnen som stannar kvar livet ut.
               </p>
 
               <a
@@ -79,15 +82,14 @@ export default function HomePage() {
         <div className="flex flex-col gap-8 px-2 py-12 md:flex-row md:gap-12">
           {/* Text till vänster */}
           <div className="min-w-0 flex-1">
-            <h2 className="mt-10 text-left text-5xl text-[#3a2516]">Boende</h2>
+            <h2 className="mt-10 ml-10 text-left text-5xl text-[#3a2516]">
+              Boende
+            </h2>
 
             <p className="mt-5 ml-10 text-left text-[#3a2516]">
-              Rum för alla tillfällen
-            </p>
-
-            <p className="mt-5 ml-10 text-left text-[#3a2516]">
-              Oavsett om du kommer för en romantisk helg, en aktiv semester
-              eller konferens har vi ett rum som passar dig.
+              Rum för alla tillfällen. Oavsett om du kommer för en romantisk
+              helg, en aktiv semester eller konferens har vi ett rum som passar
+              dig.
             </p>
           </div>
 
@@ -126,6 +128,19 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+      </section>
+      <section className="relative -mt-8 h-72 bg-[#F3E9D7] md:-mt-12 md:h-80">
+        <img
+          src={skogvanster}
+          alt="Skog vänstersida"
+          className="absolute bottom-0 left-6 block h-64 w-auto max-w-[40%] object-contain md:left-10"
+        />
+
+        <img
+          src={skoghoger}
+          alt="Skog högersida"
+          className="absolute bottom-0 right-6 block h-64 w-auto max-w-[40%] object-contain md:right-10"
+        />
       </section>
     </>
   );

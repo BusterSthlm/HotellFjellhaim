@@ -14,7 +14,6 @@ const LINKS: FooterLink[] = [
   { label: "Upplevelser", href: "/experience" },
   { label: "Restaurang", href: "/restaurant" },
   { label: "Om oss", href: "/about" },
-  { label: "Kontakt", href: "/contact" },
 ];
 
 export default function Footer() {
