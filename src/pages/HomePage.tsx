@@ -20,25 +20,19 @@ export default function HomePage() {
           backgroundSize: "140%",
         }}
       >
-      
         <Header overImage />
 
         <main className="relative px-6 pt-88 sm:px-10 sm:pt-96">
-          <p className="pt-20 text-left font-garamond text-[#F3E9D7] sm:pt-28">
-            HOTELL I DALARNA
-          </p>
-
-          <h1 className="text-left text-5xl text-secondary sm:text-6xl">
+          <h1 className="text-left text-5xl text-secondary font-bold sm:text-6xl mt-20">
             Din plats att njuta i fjällen
           </h1>
 
           <p className="mb-14 mt-4 text-left text-secondary sm:mb-20">
             Natur, avkoppling och äventyr - året runt.
           </p>
-<div className="flex justify-center">
-<HotelCheckIn />
-</div>
-          
+          <div className="flex justify-center">
+            <HotelCheckIn />
+          </div>
         </main>
       </div>
 
@@ -49,11 +43,7 @@ export default function HomePage() {
           <div className="flex flex-col gap-8 md:flex-row md:items-stretch md:gap-10">
             {/* Text till vänster */}
             <div className="min-w-0 flex-1">
-              <h3 className="mt-10  text-left text-serif text-secondary">
-                Välkommen till Fjällheim
-              </h3>
-
-              <h2 className="text-left text-5xl text-[#F3E9D7]">
+              <h2 className="text-left mt-10 text-5xl text-[#F3E9D7] font-bold">
                 Mer än ett hotell.
                 <br /> En upplevelse
               </h2>
@@ -65,10 +55,10 @@ export default function HomePage() {
               </p>
 
               <a
-                href="/dalarna"
+                href="/Experience"
                 className="mt-4 block text-left font-lato text-[#F3E9D7] hover:underline"
               >
-                Upptäck Dalarna →
+                Upplev Dalarna →
               </a>
             </div>
 
@@ -85,7 +75,7 @@ export default function HomePage() {
         <div className="flex flex-col gap-8 px-2 py-12 md:flex-row md:gap-12">
           {/* Text till vänster */}
           <div className="min-w-0 flex-1">
-            <h2 className="mt-10 ml-10 text-left text-5xl text-[#3a2516]">
+            <h2 className="font-garamond ml-10 mb-5 mt-10 font-bold text-5xl">
               Boende
             </h2>
 
@@ -113,7 +103,7 @@ export default function HomePage() {
               <Link
                 key={room.title}
                 to="/booking"
-                className="group overflow-hidden rounded-xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                className="group overflow-hidden rounded-xl bg-[#68452d] shadow-sm transition hover:underline hover:-translate-y-1 hover:shadow-lg"
               >
                 <img
                   src={room.image}
@@ -121,9 +111,13 @@ export default function HomePage() {
                   className="h-56 w-full object-cover"
                 />
                 <div className="p-5">
-                  <h2 className="text-2xl font-semibold">{room.title}</h2>
-                  <p className="mt-2 font-lato text-sm">{room.description}</p>
-                  <span className="mt-4 inline-block font-garamond underline">
+                  <h2 className="text-2xl text-[#f3e9d7] font-semibold">
+                    {room.title}
+                  </h2>
+                  <p className="mt-2 font-lato text-[#f3e9d7] text-sm">
+                    {room.description}
+                  </p>
+                  <span className="mt-4 inline-block font-garamond text-[#f3e9d7]">
                     Se boende
                   </span>
                 </div>

@@ -48,7 +48,7 @@ export default function MatOchDryck() {
   return (
     <>
       <Header overImage />
-      <main className="bg-[#F3E9D7] text-[#2b2118]">
+      <main className="bg-[#F3E9D7] text-[#331f11]">
         <PageHero
           image={IMG.hero}
           eyebrow="Mat och dryck"
@@ -75,7 +75,7 @@ export default function MatOchDryck() {
           </div>
 
           <div className="py-12 text-[#f3e9d7] md:px-12">
-            <h2 className="font-garamond mb-5 mt-10 text-3xl">
+            <h2 className="font-garamond mb-5 mt-10 font-bold text-3xl">
               Mat med omtanke
             </h2>
 
@@ -97,7 +97,7 @@ export default function MatOchDryck() {
 
         <section className="grid gap-10 md:grid-cols-2 md:items-center">
           <div className="px-6 py-12 md:px-12">
-            <h2 className="font-bold text-3xl text-primary">
+            <h2 className="font-bold mb-5 text-3xl text-primary">
               Restaurang & bar
             </h2>
             <p>
@@ -143,11 +143,12 @@ export default function MatOchDryck() {
           className="relative flex min-h-[320px] items-start bg-cover bg-center md:min-h-[400px]"
           style={{
             backgroundImage: `url(${IMG.miljo})`,
-            backgroundPosition: "center 70%",
+            backgroundSize: "115%",
+            backgroundPosition: "30% 67%",
           }}
         >
           <div className="container-page relative w-full pt-8 text-[#331f11] md:pt-12">
-            <h2 className="ml-10 font-bold text-3xl">Frukostbuffé</h2>
+            <h2 className="ml-10 font-bold text-3xl mb-5">Frukostbuffé</h2>
 
             <p className="mb-10 ml-10 max-w-[58ch] text-[#331f11]">
               Det ska vara bekvämt och kännas lyxigt att bo på hotell och

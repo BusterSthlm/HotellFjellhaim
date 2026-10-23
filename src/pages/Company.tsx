@@ -80,7 +80,9 @@ export default function Foretag() {
         <section className="bg-[#f3e9d7] py-14 text-[#331f11]">
           <div className="container-page">
             <p className="eyebrow">Våra erbjudanden</p>
-            <h2 className="mb-8 text-4xl">Konferens för alla behov</h2>
+            <h2 className="mb-8 text-4xl font-bold">
+              Konferens för alla behov
+            </h2>
 
             <div className="grid gap-8 md:grid-cols-3">
               {offers.map((offer) => (
@@ -120,7 +122,7 @@ export default function Foretag() {
           {/* Text i mitten */}
           <div className="px-6 md:px-4">
             <p className="eyebrow">Mer än bara möten</p>
-            <h2 className="text-4xl leading-tight text-cream md:text-5xl">
+            <h2 className="text-4xl leading-tight text-[#f3e9d7] font-bold md:text-5xl">
               Stärk samarbetet med upplevelser.
             </h2>
             <p className="mt-4">
@@ -130,7 +132,7 @@ export default function Foretag() {
             </p>
             <Link
               to="/experience"
-              className="mt-8 inline-flex items-center gap-2 rounded-md bg-cream px-5 py-3 font-semibold text-brown hover:bg-white"
+              className="mt-8 inline-flex items-center gap-2 rounded-md bg-cream px-5 py-3 font-semibold text-[#331f11] hover:bg-white"
             >
               Utforska upplevelser <ArrowRight aria-hidden="true" />
             </Link>

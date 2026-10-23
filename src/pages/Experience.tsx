@@ -203,7 +203,7 @@ export function ExperienceSeason({ season }: { season: Season }) {
         <Header />
         <main className="container-page py-10 pt-28">
           <div className="flex flex-wrap items-end justify-between gap-4">
-            <h1 className="text-4xl">
+            <h1 className="text-4xl font-bold">
               {isWinter ? "Att göra vinter" : "Att göra vår, sommar & höst"}
             </h1>
 
@@ -216,7 +216,7 @@ export function ExperienceSeason({ season }: { season: Season }) {
                   key={option}
                   to={`/upplevelse/${option}`}
                   aria-current={season === option ? "page" : undefined}
-                  className={`px-5 py-2 font-serif text-lg capitalize ${
+                  className={`px-5 py-2 font-lato text-lg capitalize ${
                     season === option ? "bg-brown text-cream" : "text-brown"
                   }`}
                 >
@@ -226,15 +226,15 @@ export function ExperienceSeason({ season }: { season: Season }) {
             </nav>
           </div>
           <Link
-  to="/upplevelse"
-  className="group mb-6 inline-flex items-center gap-2 text-xl text-brown"
->
-  <ArrowLeft
-    aria-hidden="true"
-    className="transition group-hover:-translate-x-1"
-  />
-  Tillbaka
-</Link>
+            to="/upplevelse"
+            className="group mb-6 mt-10 inline-flex items-center gap-2 text-xl text-brown"
+          >
+            <ArrowLeft
+              aria-hidden="true"
+              className="transition group-hover:-translate-x-1"
+            />
+            Tillbaka
+          </Link>
 
           <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {activities[season].map((activity) => (
