@@ -18,7 +18,7 @@ export default function HotelCheckIn() {
   }
 
   return (
-    <div className="mx-4 flex w-250 items-stretch gap-2 rounded-xl bg-white p-4 shadow-sm">
+    <div className="mx-4 flex w-250 items-center gap-2 rounded-xl bg-white p-4 shadow-sm">
       {/* Check-in */}
       <div className="flex flex-1 min-w-0 items-center gap-3 ">
         <button
