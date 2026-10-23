@@ -47,16 +47,16 @@ export default function MatOchDryck() {
       <Header overImage />
       <main className="bg-[#F3E9D7] text-[#2b2118]">
         <section
-          className="relative flex min-h-[520px] items-end bg-cover bg-center px-6 pb-12 pt-32 text-[#f4ECDD] md:min-h-[620px]"
+          className="relative flex min-h-[520px] items-end bg-cover bg-center px-6 pb-12 pt-32 text-white md:min-h-[620px]"
           style={{ backgroundImage: `url(${IMG.hero})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
           <div className="container-page relative">
-            <p className={label}>Mat och dryck</p>
-            <p className="text-5xl leading-tight text-[#f3e9d7] md:text-7xl font-garamond">
+            <h3 className={label}>Mat och dryck</h3>
+            <h2 className="text-5xl leading-tight text-white md:text-6xl ">
               Smaker som hör hemma här
-            </p>
-            <p className="mt-4 max-w-xl text-lg text-[#f3e9d7]">
+            </h2>
+            <p className="mt-4 max-w-xl text-m text-white">
               Lokala råvaror och säsongsinspirerade måltider som gör varje
               måltid lite speciell.
             </p>
@@ -79,24 +79,28 @@ export default function MatOchDryck() {
             className="h-72 w-full object-cover md:h-full"
           />
           <div className="bg-[#3f4a35] px-6 py-12 text-[#f3e9d7] md:px-12">
-            <p className="text-[#f3e9d7] font-bold">Frukost</p>
-            <p className="text-[#f3e9d7]">
+            <h2 className="text-[#f3e9d7] font-serif ">Frukost</h2> 
+            <p className="text-[#f3e9d7] font-lato font-light">
               Det ska vara bekvämt och kännas lyxigt att bo på hotell och
               frukost är bästa starten på dagen. På vår omtyckta frukostbuffé
               hittar du bland annat hembakad lingonlimpa, croassanter, olika
               sorters ost och smörgåspålägg, kokt ägg, frukt och juice, fil,
               yoghurt med flingor, müsli och fröer. Självklart har vi riktigt
               gott kaffe. Våfflor gräddar du själv och toppar med det du önskar,
-              exempel sylt och grädde eller nutella. Välkommen på frukost även
-              om du inte bor hos oss, 185,-/person
-            </p>
+              exempel sylt och grädde eller nutella. 
+            </p><br />
+            <p>Välkommen på frukost även om du inte bor hos oss, 185 kr /person</p>
+
+           
+
           </div>
         </section>
 
         <section className="grid gap-10 md:grid-cols-2 md:items-center">
           <div className="px-6 py-12 md:px-12">
-            <p className="font-bold">Restaurang & bar</p>
+            <h2 className="font-bold text-primary">Restaurang & bar</h2>
             <p>
+              
               Restaurangen varierar efter säsong. Baren är välfylld med dryck
               från Mora Bryggeri, ölsorter som Njupeskär, Dalapils, Dala ipa och
               Koppar är vi extra stolta över. Sälens Fjällbryggeri fjälldimma är
@@ -137,11 +141,13 @@ export default function MatOchDryck() {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
           <div className="container-page relative w-full text-[#f3e9d7]">
-            <p className="text-[#f3e9d7] ml-10 mt-10 font-bold">
+            <h2 className="text-[#f3e9d7] ml-10 mt-10 font-bold">
               Mat med omtanke
-            </p>
-            <p className="ml-10 mb-10 max-w-xs text-[#f3e9d7]">
-              Vi vill ta vara på det vi har och använder så mycket som möjligt
+            </h2>
+            
+            <p className="ml-10 mb-10 max-w-m w-1/2 text-[#f3e9d7]">
+              
+            Vi vill ta vara på det vi har och använder så mycket som möjligt
               av varje råvara. I köket arbetar vi med råvaror efter säsong och
               väljer gärna produkter från lokala leverantörer. Det ger oss
               möjlighet att laga mat med råvaror som är nära, aktuella och i sin
@@ -163,7 +169,7 @@ export default function MatOchDryck() {
           <div className="grid gap-8 sm:grid-cols-3 md:col-span-3">
             {hours.map(({ titel, rows }) => (
               <div key={titel}>
-                <h3 className="text-xl font-semibold">{titel}</h3>
+                <h3 className="text-xl font-semibold font-serif">{titel}</h3>
                 <dl className="mt-3 space-y-1 text-sm">
                   {rows.map(([dag, tid]) => (
                     <div key={dag} className="flex justify-start gap-6">

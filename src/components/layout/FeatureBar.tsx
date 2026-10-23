@@ -24,7 +24,7 @@ export default function FeatureBar({ items }: FeatureBarProps) {
             <Icon size={26} strokeWidth={1.5} />
 
             <div>
-              <h3 className="text-lg">{titel}</h3>
+              <h3 className="text-lg font-serif">{titel}</h3>
               <p className="text-lg">{text}</p>
             </div>
           </div>

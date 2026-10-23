@@ -66,7 +66,7 @@ export default function Foretag() {
                 <div className="p-5">
                   <h3 className="text-2xl">{offer.title}</h3>
                   <p className="mt-2 text-sm text-cream/80">{offer.text}</p>
-                  <p className="mt-5 flex items-center justify-between underline">
+                  <p className="mt-5 flex items-center justify-between ">
                     {offer.link}
                     <ArrowRight className="transition group-hover:translate-x-1" aria-hidden="true" />
                   </p>
@@ -76,28 +76,29 @@ export default function Foretag() {
           </div>
         </section>
 
-        <section className="grid bg-brown text-cream md:grid-cols-[0.9fr_1.2fr_0.9fr]">
+        <section className="grid h-100 bg-brown text-cream md:grid-cols-[0.9fr_1.2fr_0.9fr]">
           <img
             src={vandring}
             alt="Vandrare på fjället"
-            className="h-72 w-full object-cover md:h-full"
+            className="h-100 w-full object-cover md:h-100"
           />
           <div className="p-8 md:p-12">
             <p className="eyebrow">Mer än bara möten</p>
-            <h2 className="text-4xl leading-tight text-cream md:text-5xl">
+            <h2 className="text-4xl leading-tight text-cream md:text-5xl ">
               Stärk samarbetet med upplevelser.
             </h2>
-            <p className="mt-4 font-light">
+            <p className="mt-4">
               Kombinera konferensen med aktiviteter som vandring, cykling, bastu,
               matupplevelser eller en kväll vid lägerelden. Vi hjälper er att
               skapa ett program som passar ert team.
             </p>
             <Link
               to="/experience"
-              className="mt-8 inline-flex items-center gap-2 rounded-md bg-cream px-5 py-3 font-semibold text-brown hover:bg-white"
+              className="mt-8 inline-flex items-center gap-2 rounded-md bg-cream px-5 py-3 font-semibold text-brown hover:bg-white  "
             >
-              Utforska aktiviteter <ArrowRight aria-hidden="true" />
+              Utforska upplevelser <ArrowRight aria-hidden="true"  />
             </Link>
+            <br />
           </div>
           <div className="hidden min-h-[360px] flex-col gap-2 md:flex">
             <img

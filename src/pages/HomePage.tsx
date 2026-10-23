@@ -11,7 +11,7 @@ export default function HomePage() {
     <>
       {/* Sektion med bakgrundsbild */}
       <div
-        className="relative min-h-[760px] bg-cover bg-center bg-no-repeat pb-8 sm:min-h-[900px]"
+        className="relative min-h-[760px] bg-cover bg-center bg-no-repeat pb-8 sm:min-h-[900px] "
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundPosition: "center",
@@ -24,12 +24,11 @@ export default function HomePage() {
             HOTELL I DALARNA
           </p>
 
-          <h1 className="text-left text-5xl text-[#F3E9D7] sm:text-6xl">
-            En plats att
-            <br /> landa på
+          <h1 className="text-left text-5xl text-secondary sm:text-6xl">
+            Din plats att njuta i fjällen
           </h1>
 
-          <p className="mb-14 mt-4 text-left text-[#F3E9D7] sm:mb-20">
+          <p className="mb-14 mt-4 text-left text-secondary sm:mb-20">
             Natur, avkoppling och äventyr - året runt.
           </p>
 
@@ -44,9 +43,9 @@ export default function HomePage() {
           <div className="flex flex-col gap-8 md:flex-row md:items-stretch md:gap-10">
             {/* Text till vänster */}
             <div className="min-w-0 flex-1">
-              <p className="mb-5 text-left text-[#F3E9D7]">
-                VÄLKOMMEN TILL FJÄLLHEIM
-              </p>
+              <h3 className="mt-10  text-left text-serif text-secondary">
+                Hotell i Dalarna
+              </h3>
 
               <h2 className="text-left text-5xl text-[#F3E9D7]">
                 Mer än ett hotell.
@@ -72,7 +71,7 @@ export default function HomePage() {
               <img
                 src={dogimage}
                 alt="Fjällheim och den omgivande naturen"
-                className="h-[320px] w-full object-cover sm:h-[420px] md:h-full md:min-h-[500px]"
+                className="h-[320px] w-full object-cover sm:h-[420px] md:h-full md:min-h-[500px] "
               />
             </div>
           </div>
@@ -82,11 +81,11 @@ export default function HomePage() {
           <div className="min-w-0 flex-1">
             <h2 className="mt-10 text-left text-5xl text-[#3a2516]">Boende</h2>
 
-            <p className="mt-5 text-left text-[#3a2516]">
+            <p className="mt-5 ml-10 text-left text-[#3a2516]">
               Rum för alla tillfällen
             </p>
 
-            <p className="mt-5 text-left text-[#3a2516]">
+            <p className="mt-5 ml-10 text-left text-[#3a2516]">
               Oavsett om du kommer för en romantisk helg, en aktiv semester
               eller konferens har vi ett rum som passar dig.
             </p>

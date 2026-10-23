@@ -18,20 +18,20 @@ export default function HotelCheckIn() {
   }
 
   return (
-    <div className="mx-4 flex w-auto items-stretch gap-2 rounded-xl bg-[#f3e9d7] p-4 shadow-sm">
+    <div className="mx-4 flex w-250 items-stretch gap-2 rounded-xl bg-white p-4 shadow-sm">
       {/* Check-in */}
-      <div className="flex flex-1 min-w-0 items-center gap-3">
+      <div className="flex flex-1 min-w-0 items-center gap-3 ">
         <button
           type="button"
           aria-label="Välj incheckningsdatum"
           onClick={() => checkinRef.current?.showPicker()}
-          className="shrink-0 text-gray-600 hover:text-black"
+          className="shrink-0 text-primary hover:text-secondary"
         >
           <CalendarDays size={22} />
         </button>
 
         <div className="flex flex-col items-start">
-          <p className="mb-1 text-gray-500">Incheckning</p>
+          <p className="mb-1 text-primary">Incheckning</p>
 
           <input
             ref={checkinRef}
@@ -45,7 +45,7 @@ export default function HotelCheckIn() {
           <button
             type="button"
             onClick={() => checkinRef.current?.showPicker()}
-            className="text-left text-sm text-gray-700 font-lato"
+            className="text-left text-sm text-primary font-lato"
           >
             {checkin || "Välj datum"}
           </button>
@@ -64,7 +64,7 @@ export default function HotelCheckIn() {
         </button>
 
         <div className="flex flex-col items-start">
-          <p className="mb-1 text-gray-500">Utcheckning</p>
+          <p className="mb-1 text-primary">Utcheckning</p>
 
           <input
             ref={checkoutRef}
@@ -78,7 +78,7 @@ export default function HotelCheckIn() {
           <button
             type="button"
             onClick={() => checkoutRef.current?.showPicker()}
-            className="text-left text-sm text-gray-700 font-lato"
+            className="text-left text-sm text-primary font-lato"
           >
             {checkout || "Välj datum"}
           </button>
@@ -92,13 +92,13 @@ export default function HotelCheckIn() {
           onClick={() => setGuestMenuOpen(!guestMenuOpen)}
           aria-label="Välj antal gäster"
           aria-expanded={guestMenuOpen}
-          className="shrink-0 text-gray-600 hover:text-black"
+          className="shrink-0 text-primary hover:text-black"
         >
           <Users size={22} />
         </button>
 
         <div className="flex flex-col items-start">
-          <p className="mb-1 text-gray-500">Gäster</p>
+          <p className="mb-1 text-primary">Gäster</p>
 
           <button
             type="button"
@@ -114,8 +114,8 @@ export default function HotelCheckIn() {
             {/* Vuxna */}
             <div className="flex items-center justify-between py-3">
               <div>
-                <p className="font-medium text-gray-800">Vuxna</p>
-                <p className="text-xs text-gray-500">13 år eller äldre</p>
+                <p className="font-medium text-primary">Vuxna</p>
+                <p className="text-xs text-primary">13 år eller äldre</p>
               </div>
               <div className="flex items-center gap-3">
                 <button
@@ -142,8 +142,8 @@ export default function HotelCheckIn() {
             {/* Barn */}
             <div className="flex items-center justify-between border-t py-3">
               <div>
-                <p className="font-medium text-gray-800">Barn</p>
-                <p className="text-xs text-gray-500">0–12 år</p>
+                <p className="font-medium text-primary">Barn</p>
+                <p className="text-xs text-primary">0–12 år</p>
               </div>
               <div className="flex items-center gap-3">
                 <button
@@ -170,7 +170,7 @@ export default function HotelCheckIn() {
             <button
               type="button"
               onClick={() => setGuestMenuOpen(false)}
-              className="mt-2 w-full rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-[#f3e9d7] hover:bg-gray-700"
+              className="mt-2 w-full rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-secondary hover:bg-tertiary"
             >
               Klart
             </button>

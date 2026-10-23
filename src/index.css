@@ -74,6 +74,12 @@ h6 {
 
 p {
   font-family: var(--sans);
+  font-weight:400;
+  font-size: 16px;
+}
+
+.eyebrow {
+  font-family: var(--font-garamond);
 }
 
 @utility container-page {
