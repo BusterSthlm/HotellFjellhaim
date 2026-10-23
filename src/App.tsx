@@ -30,7 +30,7 @@ function App() {
             element={<ExperienceSeason season="sommar" />}
           />
           <Route path="/restaurant" element={<Resturant />} />
-          <Route path="/contact" element={<Contact />} />
+         
         </Routes>
       </main>
       <Footer />
