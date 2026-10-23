@@ -10,6 +10,10 @@ import Header from "../components/layout/Header";
 type Activity = { image: string; titel: string; text: string };
 type Season = "Vinter" | "Sommar";
 
+const Paket ={
+  img: paket1 titel: "",  text: "text"
+}
+
 const Aktivitet: Record<"Vinter" | "Sommar", Activity[]> = {
   Vinter: [
     {
@@ -124,6 +128,37 @@ export default function Upplevelser() {
             </article>
           ))}
         </div>
+
+{/* PAKETEN  */}
+<div className="mt-20">
+  <h2 className="text-center font-serif text-4xl font-semibold">Paket</h2>
+  <div className="mx-auto mt-4 h-0.5 w-1/2 bg-brown" />
+
+  <div className="mt-10 grid gap-10 md:grid-cols-3">
+    {paket.map((p) => (
+      <article
+        key={p.titel}
+        className="overflow-hidden rounded-lg bg-white shadow-md"
+      >
+        <img
+          src={p.image}
+          alt={p.titel}
+          className="h-48 w-full object-cover"
+        />
+        <div className="p-6">
+          <h3 className="font-serif text-2xl font-semibold">{p.titel}</h3>
+          <p className="mt-3 text-sm">{p.text}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</div>
+
+
+
+
+
+
       </section>
     </>
   );
