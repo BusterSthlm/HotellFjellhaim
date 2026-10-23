@@ -17,6 +17,7 @@ export default function HomePage() {
           backgroundPosition: "center",
         }}
       >
+      
         <Header overImage />
 
         <main className="relative px-6 pt-88 sm:px-10 sm:pt-96">
@@ -31,8 +32,10 @@ export default function HomePage() {
           <p className="mb-14 mt-4 text-left text-secondary sm:mb-20">
             Natur, avkoppling och äventyr - året runt.
           </p>
-
-          <HotelCheckIn />
+<div className="flex justify-center">
+<HotelCheckIn />
+</div>
+          
         </main>
       </div>
 
