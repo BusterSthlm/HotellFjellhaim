@@ -9,6 +9,28 @@ import vinter from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/Vinter.p
 import cykling from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/cykeltur.png";
 import bastu from "../assets/Images/Bilder_bokning/Bastu2.jpg";
 
+import paket1 from "../assets/Images/Bilder_paket/paket1.png";
+import paket2 from "../assets/Images/Bilder_paket/paket2.png";
+import paket3 from "../assets/Images/Bilder_paket/paket3.png";
+
+const paket: Activity[] = [
+  {
+    image: paket1,
+    title: "Fjällheims Julvecka",
+    text: "Fira jul och nyår i en varm och personlig fjällmiljö mitt i Idre...",
+  },
+  {
+    image: paket2,
+    title: "Fjällheims Julweekend",
+    text: "Fira jul och nyår i en varm och personlig fjällmiljö mitt i Idre...",
+  },
+  {
+    image: paket3,
+    title: "Mellandagar på Fjällheim",
+    text: "Fira mellandagarna på Fjällheim i Idre med tre nätters boende...",
+  },
+];
+
 type Season = "vinter" | "sommar";
 type Activity = { image: string; title: string; text: string };
 
@@ -79,6 +101,9 @@ const activities: Record<Season, Activity[]> = {
   ],
 };
 
+
+
+
 export default function Experience() {
   return (
     <>
@@ -105,6 +130,35 @@ export default function Experience() {
             </Link>
           ))}
         </div>
+
+<div className="mt-20">
+  <h2 className="text-center font-serif text-4xl font-semibold">Paket</h2>
+  <div className="mx-auto mt-4 h-0.5 w-1/2 bg-brown" />
+
+  <div className="mt-10 grid gap-10 md:grid-cols-3">
+    {paket.map((p) => (
+      <article
+        key={p.title}
+        className="overflow-hidden rounded-lg bg-white shadow-md"
+      >
+        <img
+          src={p.image}
+          alt={p.title}
+          className="h-48 w-full object-cover"
+        />
+        <div className="p-6">
+          <h3 className="font-serif text-2xl font-semibold">{p.title}</h3>
+          <p className="mt-3 text-sm">{p.text}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</div>
+
+
+
+
+
       </main>
     </>
   );
@@ -159,6 +213,33 @@ export function ExperienceSeason({ season }: { season: Season }) {
             </article>
           ))}
         </div>
+
+
+
+<div className="mt-20">
+  <h2 className="text-center font-serif text-4xl font-semibold">Paket</h2>
+  <div className="mx-auto mt-4 h-0.5 w-1/2 bg-brown" />
+
+  <div className="mt-10 grid gap-10 md:grid-cols-3">
+    {paket.map((p) => (
+      <article
+        key={p.title}
+        className="overflow-hidden rounded-lg bg-white shadow-md"
+      >
+        <img
+          src={p.image}
+          alt={p.title}
+          className="h-48 w-full object-cover"
+        />
+        <div className="p-6">
+          <h3 className="font-serif text-2xl font-semibold">{p.title}</h3>
+          <p className="mt-3 text-sm">{p.text}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</div>
+
       </main>
     </>
   );
