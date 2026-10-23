@@ -8,6 +8,8 @@ import vandring from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/vandri
 import vinter from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/Vinter.png";
 import cykling from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/cykeltur.png";
 import bastu from "../assets/Images/Bilder_bokning/Bastu2.jpg";
+import skoghoger from "../assets/grafisk-material/Illustrations/Skog/Skog_hoger.svg";
+import skogvanster from "../assets/grafisk-material/Illustrations/Skog/Skog_vanster.svg";
 
 import paket1 from "../assets/Images/Bilder_paket/paket1.png";
 import paket2 from "../assets/Images/Bilder_paket/paket2.png";
@@ -34,7 +36,12 @@ const paket: Activity[] = [
 type Season = "vinter" | "sommar";
 type Activity = { image: string; title: string; text: string };
 
-const seasonCards: { image: string; title: string; text: string; href: string }[] = [
+const seasonCards: {
+  image: string;
+  title: string;
+  text: string;
+  href: string;
+}[] = [
   {
     image: vinter,
     title: "Att göra vinter",
@@ -101,65 +108,76 @@ const activities: Record<Season, Activity[]> = {
   ],
 };
 
-
-
-
 export default function Experience() {
   return (
     <>
-      <Header />
-      <main className="container-page py-10 pt-28">
-        <h1 className="text-4xl">Upplev Idre</h1>
+      <div className="min-h-screen bg-[#F3E9D7]">
+        <Header />
+        <main className="container-page py-10 pt-28">
+          <h1 className="text-4xl">Upplev Idre</h1>
 
-        <div className="mt-10 grid gap-8 md:grid-cols-2">
-          {seasonCards.map((card) => (
-            <Link
-              key={card.href}
-              to={card.href}
-              className="group overflow-hidden rounded-lg bg-white shadow-md transition hover:-translate-y-1 hover:shadow-lg"
-            >
-              <img
-                src={card.image}
-                alt=""
-                className="h-64 w-full object-cover md:h-80"
-              />
-              <div className="p-6">
-                <h2 className="text-3xl font-semibold">{card.title}</h2>
-                <p className="mt-3">{card.text}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
+          <div className="mt-10 grid gap-8 md:grid-cols-2">
+            {seasonCards.map((card) => (
+              <Link
+                key={card.href}
+                to={card.href}
+                className="group overflow-hidden rounded-lg bg-[#68452d] text-[#F3E9D7] shadow-md transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <img
+                  src={card.image}
+                  alt=""
+                  className="h-64 w-full object-cover md:h-80"
+                />
+                <div className="p-6">
+                  <h2 className="text-3xl font-semibold">{card.title}</h2>
+                  <p className="mt-3">{card.text}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
 
-<div className="mt-20">
-  <h2 className="text-center font-serif text-4xl font-semibold">Paket</h2>
-  <div className="mx-auto mt-4 h-0.5 w-1/2 bg-brown" />
+          <div className="mt-20">
+            <h2 className="text-center font-serif text-4xl font-semibold">
+              Paket
+            </h2>
+            <div className="mx-auto mt-4 h-0.5 w-1/2 bg-brown" />
 
-  <div className="mt-10 grid gap-10 md:grid-cols-3">
-    {paket.map((p) => (
-      <article
-        key={p.title}
-        className="overflow-hidden rounded-lg bg-white shadow-md"
-      >
+            <div className="mt-10 grid gap-10 md:grid-cols-3">
+              {paket.map((p) => (
+                <article
+                  key={p.title}
+                  className="overflow-hidden rounded-lg bg-[#68452d] text-[#F3E9D7] shadow-md"
+                >
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="h-48 w-full object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="font-serif text-2xl font-semibold">
+                      {p.title}
+                    </h3>
+                    <p className="mt-3 text-sm">{p.text}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </main>
+      </div>
+      <section className="relative h-72 bg-[#F3E9D7] md:h-80">
         <img
-          src={p.image}
-          alt={p.title}
-          className="h-48 w-full object-cover"
+          src={skogvanster}
+          alt=""
+          className="absolute bottom-0 left-6 h-64 w-auto max-w-[40%] md:left-10"
         />
-        <div className="p-6">
-          <h3 className="font-serif text-2xl font-semibold">{p.title}</h3>
-          <p className="mt-3 text-sm">{p.text}</p>
-        </div>
-      </article>
-    ))}
-  </div>
-</div>
 
-
-
-
-
-      </main>
+        <img
+          src={skoghoger}
+          alt=""
+          className="absolute bottom-0 right-6 h-64 w-auto max-w-[40%] md:right-10"
+        />
+      </section>
     </>
   );
 }
@@ -169,78 +187,97 @@ export function ExperienceSeason({ season }: { season: Season }) {
 
   return (
     <>
-      <Header />
-      <main className="container-page py-10 pt-28">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <h1 className="text-4xl">
-            {isWinter ? "Att göra vinter" : "Att göra vår, sommar & höst"}
-          </h1>
+      <div className="min-h-screen bg-[#F3E9D7]">
+        <Header />
+        <main className="container-page py-10 pt-28">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <h1 className="text-4xl">
+              {isWinter ? "Att göra vinter" : "Att göra vår, sommar & höst"}
+            </h1>
 
-          <nav
-            aria-label="Välj säsong"
-            className="flex rounded-md border border-brown"
-          >
-            {(["vinter", "sommar"] as const).map((option) => (
-              <Link
-                key={option}
-                to={`/upplevelse/${option}`}
-                aria-current={season === option ? "page" : undefined}
-                className={`px-5 py-2 font-serif text-lg capitalize ${
-                  season === option ? "bg-brown text-cream" : "text-brown"
-                }`}
-              >
-                {option}
-              </Link>
-            ))}
-          </nav>
-        </div>
-
-        <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {activities[season].map((activity) => (
-            <article
-              key={activity.title}
-              className="overflow-hidden rounded-lg bg-white shadow-md"
+            <nav
+              aria-label="Välj säsong"
+              className="flex rounded-md border border-brown"
             >
-              <img
-                src={activity.image}
-                alt={activity.title}
-                className="h-64 w-full object-cover md:h-80"
-              />
-              <div className="p-6">
-                <h2 className="text-3xl font-semibold">{activity.title}</h2>
-                <p className="mt-3">{activity.text}</p>
-              </div>
-            </article>
-          ))}
-        </div>
+              {(["vinter", "sommar"] as const).map((option) => (
+                <Link
+                  key={option}
+                  to={`/upplevelse/${option}`}
+                  aria-current={season === option ? "page" : undefined}
+                  className={`px-5 py-2 font-serif text-lg capitalize ${
+                    season === option ? "bg-brown text-cream" : "text-brown"
+                  }`}
+                >
+                  {option}
+                </Link>
+              ))}
+            </nav>
+          </div>
 
+          <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {activities[season].map((activity) => (
+              <article
+                key={activity.title}
+                className="overflow-hidden rounded-lg bg-[#68452d] text-[#F3E9D7] shadow-md"
+              >
+                <img
+                  src={activity.image}
+                  alt={activity.title}
+                  className="h-64 w-full object-cover md:h-80"
+                />
+                <div className="p-6">
+                  <h2 className="text-3xl font-semibold">{activity.title}</h2>
+                  <p className="mt-3">{activity.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
 
+          <div className="mt-20">
+            <h2 className="text-center font-serif text-4xl font-semibold">
+              Paket
+            </h2>
+            <div className="mx-auto mt-4 h-0.5 w-1/2 bg-brown" />
 
-<div className="mt-20">
-  <h2 className="text-center font-serif text-4xl font-semibold">Paket</h2>
-  <div className="mx-auto mt-4 h-0.5 w-1/2 bg-brown" />
+            <div className="mt-10 grid gap-10 md:grid-cols-3">
+              {paket.map((p) => (
+                <article
+                  key={p.title}
+                  className="overflow-hidden rounded-lg bg-[#68452d] text-[#F3E9D7] shadow-md"
+                >
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="h-48 w-full object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="font-serif text-2xl font-semibold">
+                      {p.title}
+                    </h3>
+                    <p className="mt-3 text-sm">{p.text}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </main>
 
-  <div className="mt-10 grid gap-10 md:grid-cols-3">
-    {paket.map((p) => (
-      <article
-        key={p.title}
-        className="overflow-hidden rounded-lg bg-white shadow-md"
-      >
-        <img
-          src={p.image}
-          alt={p.title}
-          className="h-48 w-full object-cover"
-        />
-        <div className="p-6">
-          <h3 className="font-serif text-2xl font-semibold">{p.title}</h3>
-          <p className="mt-3 text-sm">{p.text}</p>
-        </div>
-      </article>
-    ))}
-  </div>
-</div>
+        <section className="relative h-72 overflow-hidden bg-[#F3E9D7] md:h-80">
+          <img
+            src={skogvanster}
+            alt=""
+            aria-hidden="true"
+            className="absolute bottom-0 left-6 h-64 w-auto max-w-[40%] object-contain md:left-10"
+          />
 
-      </main>
+          <img
+            src={skoghoger}
+            alt=""
+            aria-hidden="true"
+            className="absolute bottom-0 right-6 h-64 w-auto max-w-[40%] object-contain md:right-10"
+          />
+        </section>
+      </div>
     </>
   );
 }
