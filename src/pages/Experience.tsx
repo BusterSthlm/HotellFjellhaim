@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Header from "../components/layout/Header";
+import { ArrowLeft } from "lucide-react";
 import berg from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/Berg.png";
 import berg2 from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/berg2.png";
 import skidor from "../assets/Images/Bilder_aktiveter/Bilder_upplevelse/Skidor.png";
@@ -110,6 +111,7 @@ export default function Experience() {
       <Header />
       <main className="container-page py-10 pt-28">
         <h1 className="text-4xl">Upplev Idre</h1>
+        
 
         <div className="mt-10 grid gap-8 md:grid-cols-2">
           {seasonCards.map((card) => (
@@ -194,6 +196,12 @@ export function ExperienceSeason({ season }: { season: Season }) {
             ))}
           </nav>
         </div>
+        <br />
+        <Link to="/upplevelse" className="group mb-6 inline flex items-center gap-2 text-xl text-brown">
+        <ArrowLeft className="transition group-hover:translate-x-1" aria-hidden="true" /> Tillbaka
+         
+
+            </Link>
 
         <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {activities[season].map((activity) => (
@@ -216,29 +224,7 @@ export function ExperienceSeason({ season }: { season: Season }) {
 
 
 
-<div className="mt-20">
-  <h2 className="text-center font-serif text-4xl font-semibold">Paket</h2>
-  <div className="mx-auto mt-4 h-0.5 w-1/2 bg-brown" />
 
-  <div className="mt-10 grid gap-10 md:grid-cols-3">
-    {paket.map((p) => (
-      <article
-        key={p.title}
-        className="overflow-hidden rounded-lg bg-white shadow-md"
-      >
-        <img
-          src={p.image}
-          alt={p.title}
-          className="h-48 w-full object-cover"
-        />
-        <div className="p-6">
-          <h3 className="font-serif text-2xl font-semibold">{p.title}</h3>
-          <p className="mt-3 text-sm">{p.text}</p>
-        </div>
-      </article>
-    ))}
-  </div>
-</div>
 
       </main>
     </>
