@@ -225,6 +225,16 @@ export function ExperienceSeason({ season }: { season: Season }) {
               ))}
             </nav>
           </div>
+          <Link
+  to="/upplevelse"
+  className="group mb-6 inline-flex items-center gap-2 text-xl text-brown"
+>
+  <ArrowLeft
+    aria-hidden="true"
+    className="transition group-hover:-translate-x-1"
+  />
+  Tillbaka
+</Link>
 
           <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {activities[season].map((activity) => (
